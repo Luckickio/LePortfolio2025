@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <style>
+    .dark { fill: #000000 }
+    .light { fill: #ffffff }
+    @media (prefers-color-scheme: dark) {
+      .dark { fill: #ffffff }
+      .light { fill: #000000 }
+    }
+  </style>
+  <rect width="32" height="32" rx="8" class="dark"/>
+  <text x="50%" y="50%" text-anchor="middle" dy=".35em" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" class="light">LG</text>
+</svg>
