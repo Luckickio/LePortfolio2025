@@ -1,0 +1,273 @@
+{
+  "header": {
+    "name": "Lucas GUELL",
+    "navigation": [
+      { "label": "À propos", "href": "#about" },
+      { "label": "Compétences", "href": "#skills" },
+      { "label": "Parcours", "href": "#education" },
+      { "label": "Projets", "href": "#projects" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  },
+  "hero": {
+    "title": "Développeur Full Stack & Data Analyst",
+    "description": "Spécialisé dans le développement d'applications web modernes et l'analyse de données. Compétent en React, Next.js et Python pour la data science.",
+    "buttons": [
+      {
+        "text": "Voir mes projets",
+        "variant": "default"
+      },
+      {
+        "text": "Me contacter",
+        "variant": "outline"
+      }
+    ]
+  },
+  "terminal": {
+    "welcome": "Bienvenue ! Tapez 'help' pour voir les commandes disponibles.",
+    "commands": {
+      "help": [
+        "Commandes disponibles :",
+        "  about     - En savoir plus sur moi",
+        "  skills    - Voir mes compétences techniques",
+        "  projects  - Liste de mes projets",
+        "  contact   - Mes informations de contact",
+        "  games     - Liste des jeux disponibles",
+        "  clear     - Effacer le terminal"
+      ],
+      "games": [
+        "Jeux disponibles :",
+        "",
+        "  guess     - Devinez un nombre entre 1 et 100",
+        "  calc      - Jeu de calcul mental",
+        "",
+        "Commandes en jeu :",
+        "  exit / q    - Quitter le jeu en cours"
+      ],
+      "about": [
+        "Lucas GUELL - Développeur Full Stack & Data Analyst",
+        "",
+        "Passionné d'informatique depuis mes 14 ans, j'ai commencé par explorer",
+        "la cybersécurité avant de me diriger vers le développement.",
+        "Aujourd'hui, je me spécialise en Développement Full Stack et",
+        "l'Analyse de Données. Je suis très minutieux dans mon apprentissage",
+        "et j'accorde une grande importance à l'open source, à la protection",
+        "de la vie privée et à la confidentialité des données."
+      ],
+      "skills": [
+        "Compétences techniques :",
+        "",
+        "Développement Fullstack :",
+        "  • HTML / CSS",
+        "  • TypeScript, JavaScript",
+        "  • React, Next.js",
+        "  • Tailwind CSS",
+        "  • PHP, SQL, MongoDB",
+        "",
+        "Data Science & Programmation :",
+        "  • Python (pandas, numpy, tensorflow, sklearn)",
+        "  • R",
+        "  • C, C#, Rust",
+        "  • Bash",
+        "",
+        "Outils & Environnement :",
+        "  • Git, Docker",
+        "  • Figma",
+        "  • VSCodium",
+        "  • JupyterLab",
+        "  • RStudio",
+        "  • Fedora, Windows 11",
+        "  • Deepseek (local)"
+      ],
+      "projects": [
+        "Projets principaux :",
+        "",
+        "1. Le portfolio (2025)",
+        "   • HTML, CSS, Tailwind CSS, TypeScript, React, ShadCN UI",
+        "   • Portfolio (actuel)",
+        "",
+        "2. Le portfolio (2023)",
+        "   • HTML, CSS, JavaScript, React",
+        "   • Portfolio réalisé essentiellement avec la librairie React",
+        "",
+        "3. GCR GSB",
+        "   • PHP, HTML, CSS, PostgreSQL",
+        "   • Application web de gestion de pharmacopée et de liste de praticiens"
+      ],
+      "contact": [
+        "Contactez-moi :",
+        "",
+        "Email    : contact@lucasguell.com",
+        "GitHub   : github.com/Luckickio",
+        "LinkedIn : linkedin.com/in/lucasguell"
+      ],
+      "rm -rf /": ["Oui bon, faut pas déconner quand même..."]
+    }
+  },
+  "about": {
+    "title": "À propos",
+    "introduction": {
+      "title": "Développeur Full Stack & Data Analyst",
+      "description": "Passionné d'informatique depuis mes 14 ans, j'ai commencé par explorer la cybersécurité avant de me diriger vers le développement. Aujourd'hui, je me spécialise en Développement Full Stack et l'Analyse de Données. Je suis très minutieux dans mon apprentissage et j'accorde une grande importance à l'open source, à la protection de la vie privée et à la confidentialité des données."
+    },
+    "specializations": [
+      {
+        "title": "Développement Full Stack",
+        "description": "Conception et développement d'applications web complètes avec des technologies modernes telles que React, Next.js et Tailwind CSS, tout en intégrant des pratiques DevOps pour assurer une livraison continue et une gestion optimale.",
+        "icon": "code"
+      },
+      {
+        "title": "Analyse de Données et Data Science",
+        "description": "Exploitation de données massives et mise en œuvre de modèles d'analyse avec Python et R, en utilisant des bibliothèques telles que Pandas, NumPy et Scikit-learn pour extraire des informations clés et améliorer la prise de décision.",
+        "icon": "brain"
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Création d'interfaces utilisateurs intuitives et esthétiques, en utilisant des outils comme Figma, pour offrir une expérience fluide et agréable sur toutes les plateformes.",
+        "icon": "palette"
+      }
+    ]
+  },
+  "education": {
+    "experiences": [
+      {
+        "school": "Campus Luminy, Marseille",
+        "period": "2024 - Maintenant",
+        "degree": "Licence Pro Metiers du decisionnel et de la statistique : Informatique decisionnelle, statistiques et Big Data",
+        "description": "Licence professionnelle mention Métiers du décisionnel et de la statistique.",
+        "image": "/src/assets/Educations/Univ_Aix-Marseille_-_Sciences.svg"
+      },
+      {
+        "school": "Lycée Victor Hugo, Marseille",
+        "period": "2021 - 2023",
+        "degree": "BTS services informatiques aux organisations option B solutions logicielles et applications métiers",
+        "description": [
+          "Diplôme BTS services informatiques aux organisations option B solutions logicielles et applications métiers",
+          "Attestation CCNA Cybersecurity Operations"
+        ],
+        "image": "/src/assets/Educations/lyce_victor_hugo_marseille_logo.png"
+      },
+      {
+        "school": "Lycée Thiers, Marseille",
+        "period": "2019 - 2020",
+        "degree": "Terminal Scientifique option science de l'ingénieur",
+        "description": "Baccalauréat scientifique option science de l'ingénieur",
+        "image": "/src/assets/Educations/thiers.svg"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "category": "Développement Fullstack",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "PHP",
+        "PostgreSQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "category": "Data Science & Programmation",
+      "technologies": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "TensorFlow",
+        "Scikit-learn",
+        "R",
+        "C",
+        "C#",
+        "Rust",
+        "Bash"
+      ]
+    },
+    {
+      "category": "Outils & Environnement",
+      "technologies": [
+        "Git",
+        "Figma",
+        "Docker",
+        "VSCodium",
+        "JupyterLab",
+        "RStudio",
+        "Fedora",
+        "Windows 11",
+        "Deepseek"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Le Portfolio (2025)",
+      "description": "Portfolio (actuel) réalisé avec HTML, CSS, Tailwind CSS, TypeScript, React et ShadCN UI.",
+      "image": {
+        "src": "/src/assets/projects/LePortfolio2025.png"
+      },
+      "technologies": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "Tailwind CSS" },
+        { "name": "TypeScript" },
+        { "name": "React" },
+        { "name": "Shadcn/ui" },
+        { "name": "FramerMotion" }
+      ],
+      "sourceUrl": "https://github.com/Luckickio/LePortfolio2025",
+      "liveUrl": "https://portfolio-2025.example.com"
+    },
+    {
+      "title": "Le Portfolio (2023)",
+      "description": "Portfolio réalisé essentiellement avec la librairie React.",
+      "image": {
+        "src": "/src/assets/projects/LePortfolio2023.png"
+      },
+      "technologies": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" },
+        { "name": "React" }
+      ],
+      "sourceUrl": "https://github.com/Luckickio/LePortfolio2023",
+      "liveUrl": "https://lucasguell.com/Projects/LePortfolio2023/"
+    },
+    {
+      "title": "GCR GSB",
+      "description": "Application web de gestion de pharmacopée et de liste de praticiens.",
+      "image": {
+        "src": "/src/assets/projects/GCR.png"
+      },
+      "technologies": [
+        { "name": "PHP" },
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "PostgreSQL" }
+      ],
+      "sourceUrl": "https://github.com/Luckickio/gcr-gsb"
+    }
+  ],
+  "contact": {
+    "title": "Contact",
+    "description": "N'hésitez pas à me contacter pour toute question ou demande.",
+    "email": "contact@lucasguell.com",
+    "location": "Marseille, France",
+    "github": "github.com/Luckickio",
+    "linkedin": "linkedin.com/in/lucasguell",
+    "pgpKey": "-----BEGIN PGP PUBLIC KEY BLOCK-----\nComment: ID utilisateur:\tLucas GUELL <contact@lucasguell.com>\nComment: Valide à partir de:\t17/03/2025 10:31\nComment: Valide jusqu'à:\t17/03/2028 12:00\nComment: Type:\t255-bit EdDSA (certificat secret disponible)\nComment: Utilisation:\tSignature, Chiffrement, Certification des identifiants utilisateur\nComment: Empreinte:\tA2A4993AC1522B03FAFF0FE09A110545B987807F\n\n\nmDMEZ9fr2BYJKwYBBAHaRw8BAQdA+4fUU8nJ3GiwDOAfKTb637TTYLnQjma4Lg0v\nVHTcorS0JEx1Y2FzIEdVRUxMIDxjb250YWN0QGx1Y2FzZ3VlbGwuY29tPoiZBBMW\nCgBBFiEEoqSZOsFSKwP6/w/gmhEFRbmHgH8FAmfX69gCGwMFCQWlANgFCwkIBwIC\nIgIGFQoJCAsCBBYCAwECHgcCF4AACgkQmhEFRbmHgH/6RgD/b/f6TtFS9gRcyF5T\ndfxNQRJx0lAvMQmBK47zfYaiXUwA/AsVm63ltyNIWebQszhuCpOEAWTHWQiqv4uI\nQjjkIpQHuDgEZ9fr2BIKKwYBBAGXVQEFAQEHQEML8v/Sjro6hQGjKkXslJDH6JGx\nPcHc0wRU/+xvWY1FAwEIB4h+BBgWCgAmFiEEoqSZOsFSKwP6/w/gmhEFRbmHgH8F\nAmfX69gCGwwFCQWlANgACgkQmhEFRbmHgH8IfgEAymYNx5loh6nFun4OoDoZglzx\nIv7AbDZ1l5nmXEYdU1sA/jGeO5sA5j1KvCfkmiodEVnjVM1vfY0VP09mJOrBzxcD\n=gtOG\n-----END PGP PUBLIC KEY BLOCK-----",
+    "social": {
+      "github": {
+        "label": "GitHub",
+        "description": "Découvrez mes projets open source"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "Connectons-nous professionnellement"
+      }
+    }
+  }
+}
