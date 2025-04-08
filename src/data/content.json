@@ -65,7 +65,7 @@
         "  • PHP, SQL, MongoDB",
         "",
         "Data Science & Programmation :",
-        "  • Python (pandas, numpy, tensorflow, sklearn)",
+        "  • Python (pandas, numpy, tensorflow, sklearn, Plotly, Dash)",
         "  • R",
         "  • C, C#, Rust",
         "  • Bash",
@@ -77,20 +77,26 @@
         "  • JupyterLab",
         "  • RStudio",
         "  • Fedora, Windows 11",
-        "  • Deepseek (local)"
+        "  • Deepseek (local)",
+        "  • DBeaver",
+        "  • Hoppscoth"
       ],
       "projects": [
         "Projets principaux :",
         "",
-        "1. Le portfolio (2025)",
+        "1. Analyse Démographique Mondiale",
+        "   • Python, CSS3, Dash, Plotly, Pandas, Docker",
+        "   • Application web interactive pour visualiser et analyser les tendances démographiques mondiales de 1960 à 2018",
+        "",
+        "2. Le portfolio (2025)",
         "   • HTML, CSS, Tailwind CSS, TypeScript, React, ShadCN UI",
         "   • Portfolio (actuel)",
         "",
-        "2. Le portfolio (2023)",
+        "3. Le portfolio (2023)",
         "   • HTML, CSS, JavaScript, React",
-        "   • Portfolio réalisé essentiellement avec la librairie React",
+        "   • Portfolio de 2023 réalisé essentiellement avec la bibliothèque React",
         "",
-        "3. GCR GSB",
+        "4. GCR GSB",
         "   • PHP, HTML, CSS, PostgreSQL",
         "   • Application web de gestion de pharmacopée et de liste de praticiens"
       ],
@@ -180,6 +186,8 @@
         "NumPy",
         "TensorFlow",
         "Scikit-learn",
+        "Plotly",
+        "Dash",
         "R",
         "C",
         "C#",
@@ -198,11 +206,29 @@
         "RStudio",
         "Fedora",
         "Windows 11",
-        "Deepseek"
+        "Deepseek",
+        "DBeaver",
+        "Hoppscotch"
       ]
     }
   ],
   "projects": [
+    {
+      "title": "Analyse Démographique Mondiale",
+      "description": "Une application web interactive pour visualiser et analyser les tendances démographiques mondiales de 1960 à 2018.",
+      "image": {
+        "src": "/src/assets/projects/ADM.png"
+      },
+      "technologies": [
+        { "name": "Python" },
+        { "name": "CSS3" },
+        { "name": "Dash" },
+        { "name": "Plotly" },
+        { "name": "Pandas" },
+        { "name": "Docker" }
+      ],
+      "sourceUrl": "https://github.com/Luckickio/analyse-demographique-mondiale"
+    },
     {
       "title": "Le Portfolio (2025)",
       "description": "Portfolio (actuel) réalisé avec HTML, CSS, Tailwind CSS, TypeScript, React et ShadCN UI.",
@@ -219,11 +245,11 @@
         { "name": "FramerMotion" }
       ],
       "sourceUrl": "https://github.com/Luckickio/LePortfolio2025",
-      "liveUrl": "https://portfolio-2025.example.com"
+      "liveUrl": "https://lucasguell.com/"
     },
     {
       "title": "Le Portfolio (2023)",
-      "description": "Portfolio réalisé essentiellement avec la librairie React.",
+      "description": "Portfolio de 2023 réalisé essentiellement avec la bibliothèque React.",
       "image": {
         "src": "/src/assets/projects/LePortfolio2023.png"
       },
@@ -233,12 +259,11 @@
         { "name": "JavaScript" },
         { "name": "React" }
       ],
-      "sourceUrl": "https://github.com/Luckickio/LePortfolio2023",
-      "liveUrl": "https://lucasguell.com/Projects/LePortfolio2023/"
+      "sourceUrl": "https://github.com/Luckickio/LePortfolio2023"
     },
     {
       "title": "GCR GSB",
-      "description": "Application web de gestion de pharmacopée et de liste de praticiens.",
+      "description": "Application web de gestion de pharmacopée et de liste de praticiens. Permet la gestion et la consultation des médicaments ainsi que pour consulter une liste à jour des praticiens.",
       "image": {
         "src": "/src/assets/projects/GCR.png"
       },

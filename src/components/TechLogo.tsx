@@ -32,6 +32,10 @@ import shadcnuiLogo from "@/assets/logos/shadcnui_logo.png";
 import radixLogo from "@/assets/logos/radix_logo.png";
 import RStudioLogo from "@/assets/logos/RStudio_Logo.png";
 import FramerMotionLogo from "@/assets/logos/framer-motion.svg";
+import HoppscotchLogo from "@/assets/logos/Hoppscotch_logo.svg";
+import DBeaverLogo from "@/assets/logos/DBeaver_logo.svg";
+import DashLogo from "@/assets/logos/Dash_logo.png";
+import PlotlyLogo from "@/assets/logos/Plotly_logo.png";
 
 const techLogos: Record<string, { src: string; isLocal?: boolean }> = {
   "React Local": {
@@ -164,6 +168,22 @@ const techLogos: Record<string, { src: string; isLocal?: boolean }> = {
   },
   FramerMotion: {
     src: FramerMotionLogo,
+    isLocal: true,
+  },
+  Hoppscotch: {
+    src: HoppscotchLogo,
+    isLocal: true,
+  },
+  DBeaver: {
+    src: DBeaverLogo,
+    isLocal: true,
+  },
+  Dash: {
+    src: DashLogo,
+    isLocal: true,
+  },
+  Plotly: {
+    src: PlotlyLogo,
     isLocal: true,
   },
 };

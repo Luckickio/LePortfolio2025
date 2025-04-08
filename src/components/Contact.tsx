@@ -48,7 +48,6 @@ export function Contact() {
         >
           <Card className="overflow-hidden shadow-xl">
             <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x">
-              {/* Informations de contact */}
               <div className="p-4 sm:p-6 md:p-8 flex flex-col">
                 <div className="mb-6">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
@@ -124,7 +123,6 @@ export function Contact() {
                 </div>
               </div>
 
-              {/* Réseaux sociaux */}
               <div className="p-4 sm:p-6 md:p-8 flex flex-col">
                 <div className="mb-6">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
