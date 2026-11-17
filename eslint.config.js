@@ -19,6 +19,7 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
+      '@typescript-eslint/ban-ts-comment': ['error', { 'ts-expect-error': false }],
       'react-refresh/only-export-components': [
         'warn',
         {

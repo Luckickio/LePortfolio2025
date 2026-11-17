@@ -74,7 +74,7 @@ const techLogos: Record<string, { src: string; darkInvert?: boolean }> = {
   "Shadcn/ui": { src: shadcnuiLogo, darkInvert: true },
   Radix: { src: radixLogo },
   RStudio: { src: rstudioLogo },
-  FramerMotion: { src: motionLogo, darkInvert: true },
+  Motion: { src: motionLogo, darkInvert: true },
   Hoppscotch: { src: hoppscotchLogo },
   DBeaver: { src: dbeaverLogo },
   Dash: { src: dashLogo },

@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Globe } from "lucide-react";
 import { Github } from "@/components/BrandIcons";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useState, useMemo } from "react";
 import content from "@/data/content.json";
 import { TechLogo } from "./TechLogo";

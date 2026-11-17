@@ -141,4 +141,4 @@ SOFTWARE.
 
 ## npm dependencies
 
-The libraries declared in `package.json` (React, Radix UI, Framer Motion, Lucide, Tailwind CSS, etc.) are distributed under their own open source licenses, available in each package's folder under `node_modules/` after installation.
+The libraries declared in `package.json` (React, Radix UI, Motion, Lucide, Tailwind CSS, etc.) are distributed under their own open source licenses, available in each package's folder under `node_modules/` after installation.

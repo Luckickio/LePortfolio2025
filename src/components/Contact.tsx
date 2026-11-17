@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, MapPin, Send, Key, Check } from "lucide-react";
 import { Github, Linkedin } from "@/components/BrandIcons";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useState } from "react";
 import content from "@/data/content.json";
 

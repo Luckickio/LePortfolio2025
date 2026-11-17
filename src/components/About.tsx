@@ -1,5 +1,5 @@
 import { Server, Code, Brain, Palette } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import content from "@/data/content.json";
 
 const icons = {

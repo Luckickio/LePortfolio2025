@@ -6,7 +6,7 @@ Portfolio web personnel, statique et responsive, développé avec React, TypeScr
 [![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-8.3-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-14.14-0055FF?logo=framer&logoColor=white)](https://motion.dev/)
+[![Motion](https://img.shields.io/badge/Motion-14.14-FFF312)](https://motion.dev/)
 [![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-Radix-000000?logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
 [![ESLint](https://img.shields.io/badge/ESLint-10-4B32C3?logo=eslint&logoColor=white)](https://eslint.org/)
 [![Licence](https://img.shields.io/badge/Licence-Tous_droits_r%C3%A9serv%C3%A9s-red)](LICENSE)
@@ -22,7 +22,7 @@ Site en ligne : [lucasguell.com](https://lucasguell.com)
 - **Thème clair, sombre ou système** : le thème suit la préférence de l'appareil, et le choix du visiteur est mémorisé.
 - **Prononciation du nom** : lecture audio intégrée à l'en-tête.
 - **Clé PGP publique** : copiable en un clic depuis la section Contact.
-- **Animations** : apparitions au défilement avec Framer Motion, désactivées lorsque le système demande de réduire les animations.
+- **Animations** : apparitions au défilement avec Motion, désactivées lorsque le système demande de réduire les animations.
 - **Responsive** : mise en page adaptée du mobile (menu latéral) au grand écran.
 - **Contenu séparé du code** : l'ensemble des textes est stocké dans un fichier JSON (voir [Modification du contenu](#modification-du-contenu)).
 
@@ -43,7 +43,7 @@ Site en ligne : [lucasguell.com](https://lucasguell.com)
 |---|---|
 | Interface | [React 19](https://react.dev/), [TypeScript 6](https://www.typescriptlang.org/) |
 | Style | [Tailwind CSS 4](https://tailwindcss.com/), [shadcn/ui](https://ui.shadcn.com/) (basé sur [Radix UI](https://www.radix-ui.com/)) |
-| Animations | [Framer Motion](https://motion.dev/) |
+| Animations | [Motion](https://motion.dev/) |
 | Icônes | [Lucide](https://lucide.dev/), [Radix Icons](https://www.radix-ui.com/icons), [Devicon](https://devicon.dev/) |
 | Compilation | [Vite 8](https://vite.dev/) |
 | Qualité du code | [ESLint 10](https://eslint.org/), [typescript-eslint](https://typescript-eslint.io/), règles React Hooks |

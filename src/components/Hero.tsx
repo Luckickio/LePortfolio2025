@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Terminal } from "@/components/Terminal";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import content from "@/data/content.json";
 

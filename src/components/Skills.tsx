@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { TechLogo } from './TechLogo';
 import { Card } from '@/components/ui/card';
 import content from '@/data/content.json';
