@@ -17,22 +17,22 @@ import {
 import { NamePronunciation } from "@/components/NamePronunciation";
 import content from "@/data/content.json";
 
+function ThemeIcon({ theme }: { theme: string }) {
+  if (theme === "system") return <LaptopIcon className="h-5 w-5" />;
+  if (theme === "dark") return <MoonIcon className="h-5 w-5" />;
+  return <SunIcon className="h-5 w-5" />;
+}
+
 export function Header() {
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
 
-  const ThemeIcon = () => {
-    if (theme === "system") return <LaptopIcon className="h-5 w-5" />;
-    if (theme === "dark") return <MoonIcon className="h-5 w-5" />;
-    return <SunIcon className="h-5 w-5" />;
-  };
-
   return (
     <header
-      className="fixed top-0 left-0 right-0 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 z-50"
+      className="fixed top-0 left-0 right-0 border-b bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/60 z-50"
       role="banner"
     >
-      <div className="max-w-screen-2xl mx-auto px-4">
+      <div className="max-w-(--breakpoint-2xl) mx-auto px-4">
         <nav
           className="flex h-16 items-center justify-between"
           role="navigation"
@@ -49,7 +49,7 @@ export function Header() {
                 <a
                   key={index}
                   href={item.href}
-                  className="text-sm font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-2 py-1"
+                  className="text-sm font-medium transition-colors hover:text-primary focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-2 py-1"
                   role="menuitem"
                 >
                   {item.label}
@@ -64,7 +64,7 @@ export function Header() {
                   className="h-9 w-9"
                   aria-label={`Changer le thème (actuellement en mode ${theme})`}
                 >
-                  <ThemeIcon />
+                  <ThemeIcon theme={theme} />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
@@ -108,7 +108,7 @@ export function Header() {
                   className="h-9 w-9"
                   aria-label={`Changer le thème (actuellement en mode ${theme})`}
                 >
-                  <ThemeIcon />
+                  <ThemeIcon theme={theme} />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
@@ -164,7 +164,7 @@ export function Header() {
                     <a
                       key={index}
                       href={item.href}
-                      className="text-lg font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-2 py-1"
+                      className="text-lg font-medium transition-colors hover:text-primary focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary rounded-sm px-2 py-1"
                       onClick={() => setIsOpen(false)}
                       role="menuitem"
                     >

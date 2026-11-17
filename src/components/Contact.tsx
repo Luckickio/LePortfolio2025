@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, Github, Linkedin, MapPin, Send, Key, Check } from "lucide-react";
+import { Mail, MapPin, Send, Key, Check } from "lucide-react";
+import { Github, Linkedin } from "@/components/BrandIcons";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import content from "@/data/content.json";
@@ -58,7 +59,7 @@ export function Contact() {
                   </p>
                 </div>
 
-                <div className="space-y-4 flex-grow">
+                <div className="space-y-4 grow">
                   <motion.div
                     className="flex items-center gap-3"
                     initial={{ opacity: 0, x: -20 }}

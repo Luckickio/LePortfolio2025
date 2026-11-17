@@ -6,7 +6,7 @@ import content from '@/data/content.json';
 export function Skills() {
   return (
     <section className="py-12">
-      <h2 className="mb-8 text-2xl font-semibold tracking-tight bg-gradient-to-r from-primary/80 to-primary bg-clip-text text-transparent">
+      <h2 className="mb-8 text-2xl font-semibold tracking-tight bg-linear-to-r from-primary/80 to-primary bg-clip-text text-transparent">
         Compétences
       </h2>
 
@@ -19,7 +19,7 @@ export function Skills() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            <Card className="p-6 backdrop-blur-sm bg-card/80">
+            <Card className="p-6 backdrop-blur-xs bg-card/80">
               <div className="flex items-baseline gap-4 mb-6">
                 <h3 className="text-xl font-medium">
                   {skillGroup.category}
@@ -43,8 +43,8 @@ export function Skills() {
                     }}
                     className="relative group"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="flex flex-col items-center gap-2 p-2 rounded-lg bg-card/40 backdrop-blur-sm border border-border/50">
+                    <div className="absolute inset-0 bg-linear-to-br from-primary/5 to-primary/10 rounded-lg -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="flex flex-col items-center gap-2 p-2 rounded-lg bg-card/40 backdrop-blur-xs border border-border/50">
                       <TechLogo name={tech} size="sm" />
                       <span className="text-xs font-medium text-center">
                         {tech}

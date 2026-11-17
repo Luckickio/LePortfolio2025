@@ -1,20 +1,20 @@
 import { cn } from "@/lib/utils";
 
-import reactLogo from "@/assets/logos/react.svg";
+import reactLogo from "@/assets/logos/react-original.svg";
 import html5Logo from "@/assets/logos/html5-original.svg";
-import css3Logo from "@/assets/logos/css3-original.svg";
+import cssLogo from "@/assets/logos/css3-original.svg";
 import javascriptLogo from "@/assets/logos/javascript-original.svg";
 import typescriptLogo from "@/assets/logos/typescript-original.svg";
 import nextjsLogo from "@/assets/logos/nextjs-original.svg";
 import phpLogo from "@/assets/logos/php-original.svg";
-import tailwindLogo from "@/assets/logos/tailwindcss-icon.svg";
+import tailwindLogo from "@/assets/logos/tailwindcss-original.svg";
 import mongodbLogo from "@/assets/logos/mongodb-original.svg";
 import postgresqlLogo from "@/assets/logos/postgresql-original.svg";
 import pythonLogo from "@/assets/logos/python-original.svg";
 import pandasLogo from "@/assets/logos/pandas-original.svg";
 import numpyLogo from "@/assets/logos/numpy-original.svg";
 import tensorflowLogo from "@/assets/logos/tensorflow-original.svg";
-import scikitlearnLogo from "@/assets/logos/Scikit_learn_logo_small.svg";
+import scikitlearnLogo from "@/assets/logos/scikitlearn-original.svg";
 import rLogo from "@/assets/logos/r-original.svg";
 import cLogo from "@/assets/logos/c-original.svg";
 import csharpLogo from "@/assets/logos/csharp-original.svg";
@@ -23,169 +23,62 @@ import bashLogo from "@/assets/logos/bash-original.svg";
 import gitLogo from "@/assets/logos/git-original.svg";
 import figmaLogo from "@/assets/logos/figma-original.svg";
 import dockerLogo from "@/assets/logos/docker-original.svg";
-import vscodeLogo from "@/assets/logos/vscodium_logo.png";
+import vscodiumLogo from "@/assets/logos/vscodium-original.svg";
 import jupyterLogo from "@/assets/logos/jupyter-original-wordmark.svg";
 import fedoraLogo from "@/assets/logos/fedora-original.svg";
-import windowsLogo from "@/assets/logos/Windows_11_logo.png";
+import windowsLogo from "@/assets/logos/windows11-original.svg";
 import deepseekLogo from "@/assets/logos/DeepSeek_logo.png";
-import shadcnuiLogo from "@/assets/logos/shadcnui_logo.png";
+import claudeLogo from "@/assets/logos/claude-original.svg";
+import claudeCodeLogo from "@/assets/logos/claudecode-original.svg";
+import shadcnuiLogo from "@/assets/logos/shadcn-original.svg";
 import radixLogo from "@/assets/logos/radix_logo.png";
-import RStudioLogo from "@/assets/logos/RStudio_Logo.png";
-import FramerMotionLogo from "@/assets/logos/framer-motion.svg";
-import HoppscotchLogo from "@/assets/logos/Hoppscotch_logo.svg";
-import DBeaverLogo from "@/assets/logos/DBeaver_logo.svg";
-import DashLogo from "@/assets/logos/Dash_logo.png";
-import PlotlyLogo from "@/assets/logos/Plotly_logo.png";
+import rstudioLogo from "@/assets/logos/rstudio-original.svg";
+import motionLogo from "@/assets/logos/motion-original.svg";
+import hoppscotchLogo from "@/assets/logos/hoppscotch-original.svg";
+import dbeaverLogo from "@/assets/logos/dbeaver-original.svg";
+import dashLogo from "@/assets/logos/Dash_logo.png";
+import plotlyLogo from "@/assets/logos/plotly-original.svg";
 
-const techLogos: Record<string, { src: string; isLocal?: boolean }> = {
-  "React Local": {
-    src: reactLogo,
-    isLocal: true,
-  },
-  HTML5: {
-    src: html5Logo,
-    isLocal: true,
-  },
-  CSS3: {
-    src: css3Logo,
-    isLocal: true,
-  },
-  JavaScript: {
-    src: javascriptLogo,
-    isLocal: true,
-  },
-  TypeScript: {
-    src: typescriptLogo,
-    isLocal: true,
-  },
-  React: {
-    src: reactLogo,
-    isLocal: true,
-  },
-  "Next.js": {
-    src: nextjsLogo,
-    isLocal: true,
-  },
-  PHP: {
-    src: phpLogo,
-    isLocal: true,
-  },
-  "Tailwind CSS": {
-    src: tailwindLogo,
-    isLocal: true,
-  },
-  MongoDB: {
-    src: mongodbLogo,
-    isLocal: true,
-  },
-  PostgreSQL: {
-    src: postgresqlLogo,
-    isLocal: true,
-  },
-  Python: {
-    src: pythonLogo,
-    isLocal: true,
-  },
-  Pandas: {
-    src: pandasLogo,
-    isLocal: true,
-  },
-  NumPy: {
-    src: numpyLogo,
-    isLocal: true,
-  },
-  TensorFlow: {
-    src: tensorflowLogo,
-    isLocal: true,
-  },
-  "Scikit-learn": {
-    src: scikitlearnLogo,
-    isLocal: true,
-  },
-  R: {
-    src: rLogo,
-    isLocal: true,
-  },
-  C: {
-    src: cLogo,
-    isLocal: true,
-  },
-  "C#": {
-    src: csharpLogo,
-    isLocal: true,
-  },
-  Rust: {
-    src: rustLogo,
-    isLocal: true,
-  },
-  Bash: {
-    src: bashLogo,
-    isLocal: true,
-  },
-  Git: {
-    src: gitLogo,
-    isLocal: true,
-  },
-  Figma: {
-    src: figmaLogo,
-    isLocal: true,
-  },
-  Docker: {
-    src: dockerLogo,
-    isLocal: true,
-  },
-  VSCodium: {
-    src: vscodeLogo,
-    isLocal: true,
-  },
-  JupyterLab: {
-    src: jupyterLogo,
-    isLocal: true,
-  },
-  Fedora: {
-    src: fedoraLogo,
-    isLocal: true,
-  },
-  "Windows 11": {
-    src: windowsLogo,
-    isLocal: true,
-  },
-  Deepseek: {
-    src: deepseekLogo,
-    isLocal: true,
-  },
-  "Shadcn/ui": {
-    src: shadcnuiLogo,
-    isLocal: true,
-  },
-  Radix: {
-    src: radixLogo,
-    isLocal: true,
-  },
-  RStudio: {
-    src: RStudioLogo,
-    isLocal: true,
-  },
-  FramerMotion: {
-    src: FramerMotionLogo,
-    isLocal: true,
-  },
-  Hoppscotch: {
-    src: HoppscotchLogo,
-    isLocal: true,
-  },
-  DBeaver: {
-    src: DBeaverLogo,
-    isLocal: true,
-  },
-  Dash: {
-    src: DashLogo,
-    isLocal: true,
-  },
-  Plotly: {
-    src: PlotlyLogo,
-    isLocal: true,
-  },
+const techLogos: Record<string, { src: string; darkInvert?: boolean }> = {
+  "React Local": { src: reactLogo },
+  HTML5: { src: html5Logo },
+  CSS3: { src: cssLogo },
+  JavaScript: { src: javascriptLogo },
+  TypeScript: { src: typescriptLogo },
+  React: { src: reactLogo },
+  "Next.js": { src: nextjsLogo, darkInvert: true },
+  PHP: { src: phpLogo },
+  "Tailwind CSS": { src: tailwindLogo },
+  MongoDB: { src: mongodbLogo },
+  PostgreSQL: { src: postgresqlLogo },
+  Python: { src: pythonLogo },
+  Pandas: { src: pandasLogo },
+  NumPy: { src: numpyLogo },
+  TensorFlow: { src: tensorflowLogo },
+  "Scikit-learn": { src: scikitlearnLogo },
+  R: { src: rLogo },
+  C: { src: cLogo },
+  "C#": { src: csharpLogo },
+  Rust: { src: rustLogo, darkInvert: true },
+  Bash: { src: bashLogo },
+  Git: { src: gitLogo },
+  Figma: { src: figmaLogo },
+  Docker: { src: dockerLogo },
+  VSCodium: { src: vscodiumLogo },
+  JupyterLab: { src: jupyterLogo },
+  Fedora: { src: fedoraLogo },
+  "Windows 11": { src: windowsLogo },
+  Deepseek: { src: deepseekLogo },
+  Claude: { src: claudeLogo },
+  "Claude Code": { src: claudeCodeLogo },
+  "Shadcn/ui": { src: shadcnuiLogo, darkInvert: true },
+  Radix: { src: radixLogo },
+  RStudio: { src: rstudioLogo },
+  FramerMotion: { src: motionLogo, darkInvert: true },
+  Hoppscotch: { src: hoppscotchLogo },
+  DBeaver: { src: dbeaverLogo },
+  Dash: { src: dashLogo },
+  Plotly: { src: plotlyLogo },
 };
 
 interface TechLogoProps {
@@ -216,6 +109,7 @@ export function TechLogo({ name, className, size = "md" }: TechLogoProps) {
         className={cn("h-auto w-auto", {
           "h-6 w-6": size === "md",
           "h-4 w-4": size === "sm",
+          "dark:invert": tech.darkInvert,
         })}
       />
     </div>

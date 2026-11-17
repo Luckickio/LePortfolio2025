@@ -18,8 +18,10 @@ import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { useSEO } from "@/hooks/useSEO";
 
-const _signature = btoa("Lucas GUELL <contact@lucasguell.com>");
-const _copyright = btoa("© 2025 Lucas GUELL. All rights reserved.");
+// @ts-expect-error
+const _signature = btoa("Lucas GUELL <contact@lucasguell.com>"); // eslint-disable-line @typescript-eslint/no-unused-vars
+// @ts-expect-error
+const _copyright = btoa("© 2025 Lucas GUELL. All rights reserved."); // eslint-disable-line @typescript-eslint/no-unused-vars
 
 function App() {
   useSEO();

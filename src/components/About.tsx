@@ -18,12 +18,12 @@ export function About() {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="mb-8 text-2xl font-semibold tracking-tight bg-gradient-to-r from-primary/80 to-primary bg-clip-text text-transparent">
+      <h2 className="mb-8 text-2xl font-semibold tracking-tight bg-linear-to-r from-primary/80 to-primary bg-clip-text text-transparent">
         {content.about.title}
       </h2>
 
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/5 via-primary/10 to-primary/5">
-        <div className="absolute inset-0 bg-grid-white/10 bg-[size:3rem_3rem] [mask-image:radial-gradient(white,transparent_85%)]" />
+      <div className="relative overflow-hidden rounded-2xl bg-linear-to-br from-primary/5 via-primary/10 to-primary/5">
+        <div className="absolute inset-0 bg-grid-white/10 bg-size-[3rem_3rem] mask-[radial-gradient(white,transparent_85%)]" />
 
         <div className="relative p-8">
           <motion.div

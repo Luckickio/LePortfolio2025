@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Github, Globe } from "lucide-react";
+import { Globe } from "lucide-react";
+import { Github } from "@/components/BrandIcons";
 import { motion } from "framer-motion";
 import { useState, useMemo } from "react";
 import content from "@/data/content.json";
@@ -45,7 +46,7 @@ export function Projects() {
     >
       <div className="flex flex-col space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <h2 className="text-2xl font-semibold tracking-tight bg-gradient-to-r from-primary/80 to-primary bg-clip-text text-transparent">
+          <h2 className="text-2xl font-semibold tracking-tight bg-linear-to-r from-primary/80 to-primary bg-clip-text text-transparent">
             Projets
           </h2>
           {selectedTechs.length > 0 && (
@@ -89,7 +90,7 @@ export function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               layout
             >
-              <Card className="flex flex-col overflow-hidden backdrop-blur-sm bg-card/80 h-full">
+              <Card className="flex flex-col overflow-hidden backdrop-blur-xs bg-card/80 h-full">
                 <div className="aspect-video w-full overflow-hidden">
                   <img
                     src={project.image.src}

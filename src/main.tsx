@@ -10,7 +10,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import App from "./App.tsx";
 import "./index.css";
 
-const _signature = btoa("Lucas GUELL <contact@lucasguell.com>");
+// @ts-expect-error
+const _signature = btoa("Lucas GUELL <contact@lucasguell.com>"); // eslint-disable-line @typescript-eslint/no-unused-vars
 const _copyright = btoa("© 2024 Lucas GUELL. Tous droits réservés.");
 
 const _message = btoa(

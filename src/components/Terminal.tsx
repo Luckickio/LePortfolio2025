@@ -312,7 +312,7 @@ export function Terminal() {
       role="region"
       aria-label="Terminal interactif"
     >
-      <div className="absolute -inset-1 bg-gradient-to-r from-rose-400/30 via-sky-400/30 to-violet-400/30 rounded-2xl blur-2xl opacity-50 group-hover:opacity-75 transition duration-500" />
+      <div className="absolute -inset-1 bg-linear-to-r from-rose-400/30 via-sky-400/30 to-violet-400/30 rounded-2xl blur-2xl opacity-50 group-hover:opacity-75 transition duration-500" />
 
       <div
         className="relative overflow-hidden rounded-xl border bg-background/80 shadow-2xl backdrop-blur-xl backdrop-saturate-150 transition duration-300 group-hover:translate-y-[-2px] group-hover:shadow-3xl"
@@ -350,7 +350,7 @@ export function Terminal() {
 
         <div
           ref={terminalRef}
-          className="h-[200px] sm:h-[250px] md:h-[400px] overflow-auto p-4 font-mono text-sm bg-gradient-to-b from-background/90 to-background/70 rounded-b-xl"
+          className="h-[200px] sm:h-[250px] md:h-[400px] overflow-auto p-4 font-mono text-sm bg-linear-to-b from-background/90 to-background/70 rounded-b-xl"
           style={{
             boxShadow: "inset 0 0 30px rgba(0, 0, 0, 0.1)",
           }}
@@ -373,7 +373,7 @@ export function Terminal() {
                 </span>
               </div>
               {entry.response.map((line, j) => (
-                <div key={j} className="ml-6 whitespace-pre-wrap break-words">
+                <div key={j} className="ml-6 whitespace-pre-wrap wrap-break-word">
                   {line}
                 </div>
               ))}
@@ -394,7 +394,7 @@ export function Terminal() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              className="flex-1 bg-transparent outline-none min-w-0"
+              className="flex-1 bg-transparent outline-hidden min-w-0"
               autoFocus
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}

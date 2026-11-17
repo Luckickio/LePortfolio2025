@@ -2,11 +2,26 @@
   "header": {
     "name": "Lucas GUELL",
     "navigation": [
-      { "label": "À propos", "href": "#about" },
-      { "label": "Compétences", "href": "#skills" },
-      { "label": "Parcours", "href": "#education" },
-      { "label": "Projets", "href": "#projects" },
-      { "label": "Contact", "href": "#contact" }
+      {
+        "label": "À propos",
+        "href": "#about"
+      },
+      {
+        "label": "Compétences",
+        "href": "#skills"
+      },
+      {
+        "label": "Parcours",
+        "href": "#education"
+      },
+      {
+        "label": "Projets",
+        "href": "#projects"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact"
+      }
     ]
   },
   "hero": {
@@ -58,28 +73,24 @@
         "Compétences techniques :",
         "",
         "Développement Fullstack :",
-        "  • HTML / CSS",
-        "  • TypeScript, JavaScript",
+        "  • HTML / CSS, Tailwind CSS",
+        "  • JavaScript, TypeScript",
         "  • React, Next.js",
-        "  • Tailwind CSS",
         "  • PHP, SQL, MongoDB",
         "",
-        "Data Science & Programmation :",
-        "  • Python (pandas, numpy, tensorflow, sklearn, Plotly, Dash)",
+        "Data Science & Langages :",
+        "  • Python (pandas, numpy, scikit-learn, tensorflow, Plotly, Dash)",
         "  • R",
         "  • C, C#, Rust",
         "  • Bash",
         "",
         "Outils & Environnement :",
         "  • Git, Docker",
+        "  • VSCodium, JupyterLab, RStudio",
+        "  • DBeaver, Hoppscotch",
         "  • Figma",
-        "  • VSCodium",
-        "  • JupyterLab",
-        "  • RStudio",
-        "  • Fedora, Windows 11",
-        "  • Deepseek (local)",
-        "  • DBeaver",
-        "  • Hoppscoth"
+        "  • Claude Code",
+        "  • Fedora, Windows 11"
       ],
       "projects": [
         "Projets principaux :",
@@ -107,7 +118,9 @@
         "GitHub   : github.com/Luckickio",
         "LinkedIn : linkedin.com/in/lucasguell"
       ],
-      "rm -rf /": ["Oui bon, faut pas déconner quand même..."]
+      "rm -rf /": [
+        "Oui bon, faut pas déconner quand même..."
+      ]
     }
   },
   "about": {
@@ -137,28 +150,28 @@
   "education": {
     "experiences": [
       {
-        "school": "Campus Luminy, Marseille",
-        "period": "2024 - Maintenant",
-        "degree": "Licence Pro Metiers du decisionnel et de la statistique : Informatique decisionnelle, statistiques et Big Data",
+        "school": "Aix-Marseille Université – Campus de Luminy, Marseille",
+        "period": "2024 - 2025",
+        "degree": "Licence professionnelle Métiers du décisionnel et de la statistique, parcours Informatique décisionnelle, statistiques et Big Data",
         "description": "Licence professionnelle mention Métiers du décisionnel et de la statistique.",
-        "image": "/src/assets/Educations/Univ_Aix-Marseille_-_Sciences.svg"
+        "image": "/assets/Educations/aix-marseille-universite-faculte-des-sciences.svg"
       },
       {
         "school": "Lycée Victor Hugo, Marseille",
         "period": "2021 - 2023",
-        "degree": "BTS services informatiques aux organisations option B solutions logicielles et applications métiers",
+        "degree": "BTS Services informatiques aux organisations (SIO), option B : Solutions logicielles et applications métiers (SLAM)",
         "description": [
-          "Diplôme BTS services informatiques aux organisations option B solutions logicielles et applications métiers",
+          "Diplôme du BTS Services informatiques aux organisations (SIO), option B : Solutions logicielles et applications métiers (SLAM)",
           "Attestation CCNA Cybersecurity Operations"
         ],
-        "image": "/src/assets/Educations/lyce_victor_hugo_marseille_logo.png"
+        "image": "/assets/Educations/lycee-victor-hugo-marseille.png"
       },
       {
         "school": "Lycée Thiers, Marseille",
         "period": "2019 - 2020",
-        "degree": "Terminal Scientifique option science de l'ingénieur",
-        "description": "Baccalauréat scientifique option science de l'ingénieur",
-        "image": "/src/assets/Educations/thiers.svg"
+        "degree": "Terminale S, option Sciences de l'ingénieur",
+        "description": "Baccalauréat général série S, option Sciences de l'ingénieur",
+        "image": "/assets/Educations/lycee-thiers-marseille.svg"
       }
     ]
   },
@@ -168,27 +181,27 @@
       "technologies": [
         "HTML5",
         "CSS3",
-        "TypeScript",
+        "Tailwind CSS",
         "JavaScript",
+        "TypeScript",
         "React",
         "Next.js",
-        "Tailwind CSS",
         "PHP",
         "PostgreSQL",
         "MongoDB"
       ]
     },
     {
-      "category": "Data Science & Programmation",
+      "category": "Data Science & Langages",
       "technologies": [
         "Python",
+        "R",
         "Pandas",
         "NumPy",
-        "TensorFlow",
         "Scikit-learn",
+        "TensorFlow",
         "Plotly",
         "Dash",
-        "R",
         "C",
         "C#",
         "Rust",
@@ -199,16 +212,16 @@
       "category": "Outils & Environnement",
       "technologies": [
         "Git",
-        "Figma",
         "Docker",
         "VSCodium",
         "JupyterLab",
         "RStudio",
-        "Fedora",
-        "Windows 11",
-        "Deepseek",
         "DBeaver",
-        "Hoppscotch"
+        "Hoppscotch",
+        "Figma",
+        "Claude Code",
+        "Fedora",
+        "Windows 11"
       ]
     }
   ],
@@ -217,15 +230,27 @@
       "title": "Analyse Démographique Mondiale",
       "description": "Une application web interactive pour visualiser et analyser les tendances démographiques mondiales de 1960 à 2018.",
       "image": {
-        "src": "/src/assets/projects/ADM.png"
+        "src": "/assets/projects/ADM.png"
       },
       "technologies": [
-        { "name": "Python" },
-        { "name": "CSS3" },
-        { "name": "Dash" },
-        { "name": "Plotly" },
-        { "name": "Pandas" },
-        { "name": "Docker" }
+        {
+          "name": "Python"
+        },
+        {
+          "name": "CSS3"
+        },
+        {
+          "name": "Dash"
+        },
+        {
+          "name": "Plotly"
+        },
+        {
+          "name": "Pandas"
+        },
+        {
+          "name": "Docker"
+        }
       ],
       "sourceUrl": "https://github.com/Luckickio/analyse-demographique-mondiale"
     },
@@ -233,16 +258,30 @@
       "title": "Le Portfolio (2025)",
       "description": "Portfolio (actuel) réalisé avec HTML, CSS, Tailwind CSS, TypeScript, React et ShadCN UI.",
       "image": {
-        "src": "/src/assets/projects/LePortfolio2025.png"
+        "src": "/assets/projects/LePortfolio2025.png"
       },
       "technologies": [
-        { "name": "HTML5" },
-        { "name": "CSS3" },
-        { "name": "Tailwind CSS" },
-        { "name": "TypeScript" },
-        { "name": "React" },
-        { "name": "Shadcn/ui" },
-        { "name": "FramerMotion" }
+        {
+          "name": "HTML5"
+        },
+        {
+          "name": "CSS3"
+        },
+        {
+          "name": "Tailwind CSS"
+        },
+        {
+          "name": "TypeScript"
+        },
+        {
+          "name": "React"
+        },
+        {
+          "name": "Shadcn/ui"
+        },
+        {
+          "name": "FramerMotion"
+        }
       ],
       "sourceUrl": "https://github.com/Luckickio/LePortfolio2025",
       "liveUrl": "https://lucasguell.com/"
@@ -251,13 +290,21 @@
       "title": "Le Portfolio (2023)",
       "description": "Portfolio de 2023 réalisé essentiellement avec la bibliothèque React.",
       "image": {
-        "src": "/src/assets/projects/LePortfolio2023.png"
+        "src": "/assets/projects/LePortfolio2023.png"
       },
       "technologies": [
-        { "name": "HTML5" },
-        { "name": "CSS3" },
-        { "name": "JavaScript" },
-        { "name": "React" }
+        {
+          "name": "HTML5"
+        },
+        {
+          "name": "CSS3"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "React"
+        }
       ],
       "sourceUrl": "https://github.com/Luckickio/LePortfolio2023"
     },
@@ -265,13 +312,21 @@
       "title": "GCR GSB",
       "description": "Application web de gestion de pharmacopée et de liste de praticiens. Permet la gestion et la consultation des médicaments ainsi que pour consulter une liste à jour des praticiens.",
       "image": {
-        "src": "/src/assets/projects/GCR.png"
+        "src": "/assets/projects/GCR.png"
       },
       "technologies": [
-        { "name": "PHP" },
-        { "name": "HTML5" },
-        { "name": "CSS3" },
-        { "name": "PostgreSQL" }
+        {
+          "name": "PHP"
+        },
+        {
+          "name": "HTML5"
+        },
+        {
+          "name": "CSS3"
+        },
+        {
+          "name": "PostgreSQL"
+        }
       ],
       "sourceUrl": "https://github.com/Luckickio/gcr-gsb"
     }

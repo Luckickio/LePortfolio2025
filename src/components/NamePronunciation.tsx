@@ -1,30 +1,32 @@
 import { Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
-import pronunciationSound from "@/assets/NamePronunciation/guell_pronunciation.mp3";
+import { useState, useEffect, useRef } from "react";
+import pronunciationSound from "@/assets/NamePronunciation/GUELL_pronunciation.mp3";
 
 export function NamePronunciation() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     const audioElement = new Audio(pronunciationSound);
-    setAudio(audioElement);
+    const handleEnded = () => setIsPlaying(false);
+    audioElement.addEventListener("ended", handleEnded);
+    audioRef.current = audioElement;
 
     return () => {
-      if (audioElement) {
-        audioElement.pause();
-        audioElement.src = "";
-      }
+      audioElement.removeEventListener("ended", handleEnded);
+      audioElement.pause();
+      audioElement.src = "";
+      audioRef.current = null;
     };
   }, []);
 
   const playPronunciation = () => {
+    const audio = audioRef.current;
     if (!audio || isPlaying) return;
 
     setIsPlaying(true);
-    audio.play();
-    audio.onended = () => setIsPlaying(false);
+    audio.play().catch(() => setIsPlaying(false));
   };
 
   return (
@@ -35,7 +37,7 @@ export function NamePronunciation() {
         isPlaying ? "text-primary" : "text-muted-foreground"
       }`}
       onClick={playPronunciation}
-      disabled={!audio || isPlaying}
+      disabled={isPlaying}
     >
       <Volume2 className="h-4 w-4" />
       <span className="sr-only">Écouter la prononciation</span>

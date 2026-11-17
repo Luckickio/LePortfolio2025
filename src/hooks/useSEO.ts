@@ -21,7 +21,7 @@ export function useSEO({
 
     const metaTags = {
       description: description,
-      autor: author,
+      author: author,
       keywords: keywords,
       "og:title": title,
       "og:description": description,
@@ -32,7 +32,7 @@ export function useSEO({
     };
 
     Object.entries(metaTags).forEach(([name, content]) => {
-      let meta =
+      const meta =
         document.querySelector(`meta[property="${name}"]`) ||
         document.querySelector(`meta[name="${name}"]`);
 
@@ -40,5 +40,5 @@ export function useSEO({
         meta.setAttribute("content", content);
       }
     });
-  }, [title, description, keywords, image]);
+  }, [title, description, keywords, image, author]);
 }

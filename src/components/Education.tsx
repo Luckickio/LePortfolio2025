@@ -12,7 +12,7 @@ export function Education() {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="mb-8 text-2xl font-semibold tracking-tight bg-gradient-to-r from-primary/80 to-primary bg-clip-text text-transparent">
+      <h2 className="mb-8 text-2xl font-semibold tracking-tight bg-linear-to-r from-primary/80 to-primary bg-clip-text text-transparent">
         Parcours
       </h2>
       <div className="space-y-6">
@@ -24,9 +24,9 @@ export function Education() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <Card className="p-6 backdrop-blur-sm bg-card/80">
+            <Card className="p-6 backdrop-blur-xs bg-card/80">
               <div className="flex items-start gap-4">
-                <div className="relative w-16 h-16 md:w-24 md:h-16 rounded-lg bg-primary/5 overflow-hidden flex-shrink-0 flex items-center justify-center p-2">
+                <div className="relative w-16 h-16 md:w-24 md:h-16 rounded-lg bg-primary/5 overflow-hidden shrink-0 flex items-center justify-center p-2">
                   <img
                     src={exp.image}
                     alt={exp.school}
@@ -36,7 +36,7 @@ export function Education() {
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                     <h3 className="font-semibold">{exp.school}</h3>
-                    <Badge variant="secondary" className="flex-shrink-0 w-fit">
+                    <Badge variant="secondary" className="shrink-0 w-fit">
                       {exp.period}
                     </Badge>
                   </div>
