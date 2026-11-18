@@ -15,6 +15,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { NamePronunciation } from "@/components/NamePronunciation";
+import { HoverTooltip } from "@/components/HoverTooltip";
 import {
   useLanguage,
   languages,
@@ -38,21 +39,28 @@ function ThemeMenu() {
   const { theme, setTheme } = useTheme();
   const { content } = useLanguage();
   const labels = content.ui.header.themes;
+  const [open, setOpen] = useState(false);
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="h-9 w-9"
-          aria-label={format(content.ui.header.changeTheme, {
-            theme: labels[theme],
-          })}
-        >
-          <ThemeIcon theme={theme} />
-        </Button>
-      </DropdownMenuTrigger>
+    <DropdownMenu open={open} onOpenChange={setOpen}>
+      <HoverTooltip
+        label={format(content.ui.header.themeTooltip, { theme: labels[theme] })}
+        align="end"
+        hidden={open}
+      >
+        <DropdownMenuTrigger asChild>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-9 w-9"
+            aria-label={format(content.ui.header.changeTheme, {
+              theme: labels[theme],
+            })}
+          >
+            <ThemeIcon theme={theme} />
+          </Button>
+        </DropdownMenuTrigger>
+      </HoverTooltip>
       <DropdownMenuContent align="end">
         {themes.map(({ value, Icon }) => (
           <DropdownMenuItem
@@ -73,21 +81,30 @@ function ThemeMenu() {
 
 function LanguageMenu() {
   const { language, setLanguage, content } = useLanguage();
+  const [open, setOpen] = useState(false);
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="h-9 w-9"
-          aria-label={format(content.ui.header.changeLanguage, {
-            language: languages[language].label,
-          })}
-        >
-          <Languages className="h-5 w-5" />
-        </Button>
-      </DropdownMenuTrigger>
+    <DropdownMenu open={open} onOpenChange={setOpen}>
+      <HoverTooltip
+        label={format(content.ui.header.languageTooltip, {
+          language: languages[language].label,
+        })}
+        align="end"
+        hidden={open}
+      >
+        <DropdownMenuTrigger asChild>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-9 w-9"
+            aria-label={format(content.ui.header.changeLanguage, {
+              language: languages[language].label,
+            })}
+          >
+            <Languages className="h-5 w-5" />
+          </Button>
+        </DropdownMenuTrigger>
+      </HoverTooltip>
       <DropdownMenuContent align="end">
         {(Object.keys(languages) as Language[]).map((code) => (
           <DropdownMenuItem
@@ -125,7 +142,12 @@ export function Header() {
           aria-label={content.ui.header.mainNavigation}
         >
           <div className="flex items-center gap-2">
-            <span className="text-xl font-semibold">{content.header.name}</span>
+            <a
+              href="/"
+              className="text-xl font-semibold rounded-sm focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary"
+            >
+              {content.header.name}
+            </a>
             <NamePronunciation />
           </div>
 

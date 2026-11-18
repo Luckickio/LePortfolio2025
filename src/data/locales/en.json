@@ -372,7 +372,9 @@
         "light": "Light",
         "dark": "Dark",
         "system": "System"
-      }
+      },
+      "languageTooltip": "Language: {language}",
+      "themeTooltip": "Theme: {theme}"
     },
     "pronunciation": "Listen to the pronunciation",
     "skills": {

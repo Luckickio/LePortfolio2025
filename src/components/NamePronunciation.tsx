@@ -1,7 +1,8 @@
-import { Volume2 } from "lucide-react";
+import { AudioLines } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
 import { useContent } from "@/i18n/LanguageProvider";
+import { HoverTooltip } from "@/components/HoverTooltip";
 import pronunciationSound from "@/assets/NamePronunciation/GUELL_pronunciation.mp3";
 
 export function NamePronunciation() {
@@ -32,17 +33,19 @@ export function NamePronunciation() {
   };
 
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      className={`h-6 w-6 p-0.5 hover:bg-primary/10 ${
-        isPlaying ? "text-primary" : "text-muted-foreground"
-      }`}
-      onClick={playPronunciation}
-      disabled={isPlaying}
-    >
-      <Volume2 className="h-4 w-4" />
-      <span className="sr-only">{content.ui.pronunciation}</span>
-    </Button>
+    <HoverTooltip label={content.ui.pronunciation}>
+      <Button
+        variant="ghost"
+        size="icon"
+        className={`h-6 w-6 p-0.5 hover:bg-primary/10 ${
+          isPlaying ? "text-primary" : "text-muted-foreground"
+        }`}
+        onClick={playPronunciation}
+        disabled={isPlaying}
+      >
+        <AudioLines className="h-4 w-4" />
+        <span className="sr-only">{content.ui.pronunciation}</span>
+      </Button>
+    </HoverTooltip>
   );
 }

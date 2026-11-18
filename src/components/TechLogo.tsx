@@ -60,7 +60,7 @@ const techLogos: Record<string, { src: string; darkInvert?: boolean }> = {
   C: { src: cLogo },
   "C#": { src: csharpLogo },
   Rust: { src: rustLogo, darkInvert: true },
-  Bash: { src: bashLogo },
+  Bash: { src: bashLogo, darkInvert: true },
   Git: { src: gitLogo },
   Figma: { src: figmaLogo },
   Docker: { src: dockerLogo },
@@ -109,7 +109,7 @@ export function TechLogo({ name, className, size = "md" }: TechLogoProps) {
         className={cn("h-auto w-auto", {
           "h-6 w-6": size === "md",
           "h-4 w-4": size === "sm",
-          "dark:invert": tech.darkInvert,
+          "dark:invert dark:hue-rotate-180": tech.darkInvert,
         })}
       />
     </div>

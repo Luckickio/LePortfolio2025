@@ -29,7 +29,7 @@ export function Skills() {
                 <div className="flex-1 h-px bg-border" />
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 auto-rows-fr gap-3">
                 {skillGroup.technologies.map((tech, techIndex) => (
                   <motion.div
                     key={techIndex}
@@ -43,10 +43,10 @@ export function Skills() {
                       damping: 20,
                       delay: techIndex * 0.1
                     }}
-                    className="relative group"
+                    className="relative group h-full"
                   >
                     <div className="absolute inset-0 bg-linear-to-br from-primary/5 to-primary/10 rounded-lg -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="flex flex-col items-center gap-2 p-2 rounded-lg bg-card/40 backdrop-blur-xs border border-border/50">
+                    <div className="flex h-full flex-col items-center justify-center gap-2 p-2 rounded-lg bg-card/40 backdrop-blur-xs border border-border/50">
                       <TechLogo name={tech} size="sm" />
                       <span className="text-xs font-medium text-center">
                         {tech}
