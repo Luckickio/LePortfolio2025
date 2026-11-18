@@ -1,0 +1,55 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SITE_REPO: git@github.com:Luckickio/Luckickio.github.io.git
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Publish to the site repository
+        env:
+          DEPLOY_KEY: ${{ secrets.SITE_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+          git clone --depth 1 "$SITE_REPO" site
+          rsync -a --delete --chmod=D755,F644 --exclude ".git/" --exclude "/projects/" --exclude "/CNAME" dist/ site/
+
+          cd site
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to deploy"
+            exit 0
+          fi
+          git commit -m "Deploy LePortfolio2025 (${GITHUB_SHA::7})"
+
+          for attempt in 1 2 3; do
+            git push && exit 0
+            git pull --rebase
+          done
+          exit 1
