@@ -4,7 +4,7 @@
     "description": "Portfolio de Lucas GUELL, desarrollador Full Stack y Data Analyst. Especializado en el desarrollo de aplicaciones web modernas con React y Next.js, y en el análisis de datos con Python.",
     "keywords": "desarrollador full stack, data analyst, react, next.js, python, ciencia de datos, Marsella",
     "author": "Lucas GUELL",
-    "ogImage": "/assets/projects/LePortfolio2025.png"
+    "ogImage": "https://lucasguell.com/assets/projects/LePortfolio2025.png"
   },
   "header": {
     "name": "Lucas GUELL",
@@ -145,14 +145,14 @@
         "icon": "code"
       },
       {
-        "title": "Análisis de Datos y Data Science",
+        "title": "Análisis de Datos",
         "description": "Explotación de grandes volúmenes de datos e implementación de modelos de análisis con Python y R, utilizando bibliotecas como Pandas, NumPy y Scikit-learn para extraer información clave y mejorar la toma de decisiones.",
-        "icon": "brain"
+        "icon": "chart"
       },
       {
         "title": "Diseño UI/UX",
         "description": "Creación de interfaces de usuario intuitivas y estéticas, con herramientas como Figma, para ofrecer una experiencia fluida y agradable en todas las plataformas.",
-        "icon": "palette"
+        "icon": "layout"
       }
     ]
   },

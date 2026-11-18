@@ -1,12 +1,12 @@
-import { Server, Code, Brain, Palette } from "lucide-react";
+import { Server, Code, ChartColumnIncreasing, LayoutTemplate } from "lucide-react";
 import { motion } from "motion/react";
 import { useContent } from "@/i18n/LanguageProvider";
 
 const icons = {
   code: Code,
   server: Server,
-  brain: Brain,
-  palette: Palette,
+  chart: ChartColumnIncreasing,
+  layout: LayoutTemplate,
 };
 
 export function About() {
@@ -55,7 +55,7 @@ export function About() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 >
-                  <div className="absolute right-4 top-4 text-primary/10 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110">
+                  <div className="absolute right-4 top-4 text-primary/10 transition-[transform,color] duration-500 ease-out group-hover:-translate-y-1 group-hover:text-primary/20">
                     {IconComponent && <IconComponent className="h-12 w-12" />}
                   </div>
                   <div className="relative space-y-4">
