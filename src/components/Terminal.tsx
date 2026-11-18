@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { Terminal as TerminalIcon, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import content from "@/data/content.json";
+import { useContent, format } from "@/i18n/LanguageProvider";
 
 interface Command {
   command: string;
@@ -11,6 +11,8 @@ interface Command {
 type Game = "guess" | "calc" | null;
 
 export function Terminal() {
+  const content = useContent();
+  const ui = content.ui.terminal;
   const [history, setHistory] = useState<Command[]>([]);
   const [input, setInput] = useState("");
   const [isFocused, setIsFocused] = useState(false);
@@ -34,17 +36,18 @@ export function Terminal() {
     }
   };
 
-  const exitGame = () => {
+  const gameOverMessage = ui.gameOver;
+  const exitGame = useCallback(() => {
     setCurrentGame(null);
     setGameState((prev) => ({ ...prev, score: 0 }));
     setHistory((prev) => [
       ...prev,
       {
         command: "exit",
-        response: ["Jeu terminé."],
+        response: [gameOverMessage],
       },
     ]);
-  };
+  }, [gameOverMessage]);
 
   const startGuessGame = () => {
     const number = Math.floor(Math.random() * 100) + 1;
@@ -55,9 +58,9 @@ export function Terminal() {
       {
         command: "guess",
         response: [
-          "Jeu de devinette démarré !",
-          "Devinez un nombre entre 1 et 100.",
-          'Tapez "exit" pour quitter.',
+          ui.guess.start,
+          ui.guess.prompt,
+          ui.exitHint,
         ],
       },
     ]);
@@ -80,9 +83,9 @@ export function Terminal() {
       {
         command: "calc",
         response: [
-          "Jeu de calcul mental démarré !",
-          `Combien fait ${a} ${operator} ${b} ?`,
-          'Tapez "exit" pour quitter.',
+          ui.calc.start,
+          format(ui.calc.question, { a, operator, b }),
+          ui.exitHint,
         ],
       },
     ]);
@@ -100,19 +103,19 @@ export function Terminal() {
         {
           command: guess.toString(),
           response: [
-            `Bravo ! Vous avez trouvé le nombre ${guessNumber} en ${newCount} essais !`,
-            'Tapez "guess" pour rejouer.',
+            format(ui.guess.win, { number: guessNumber, count: newCount }),
+            ui.guess.replay,
           ],
         },
       ]);
       setCurrentGame(null);
     } else {
-      const hint = guess > guessNumber ? "plus petit" : "plus grand";
+      const hint = guess > guessNumber ? ui.guess.lower : ui.guess.higher;
       setHistory((prev) => [
         ...prev,
         {
           command: guess.toString(),
-          response: [`Le nombre est ${hint} que ${guess}`],
+          response: [format(hint, { guess })],
         },
       ]);
     }
@@ -156,8 +159,8 @@ export function Terminal() {
         {
           command: answer.toString(),
           response: [
-            "Correct ! Score : " + newScore,
-            `Nouveau calcul : ${newA} ${newOperator} ${newB} ?`,
+            format(ui.calc.correct, { score: newScore }),
+            format(ui.calc.next, { a: newA, operator: newOperator, b: newB }),
           ],
         },
       ]);
@@ -167,9 +170,9 @@ export function Terminal() {
         {
           command: answer.toString(),
           response: [
-            `Incorrect ! La réponse était ${correctAnswer}`,
-            `Score final : ${gameState.score}`,
-            'Tapez "calc" pour rejouer.',
+            format(ui.calc.wrong, { answer: correctAnswer }),
+            format(ui.calc.finalScore, { score: gameState.score }),
+            ui.calc.replay,
           ],
         },
       ]);
@@ -222,7 +225,7 @@ export function Terminal() {
 
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [isFocused, currentGame, commandHistory, historyIndex]);
+  }, [isFocused, currentGame, commandHistory, historyIndex, exitGame]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -248,12 +251,12 @@ export function Terminal() {
         setInput("");
         return;
       } else {
-        response = ["Aucun jeu en cours."];
+        response = [ui.noGame];
       }
     } else if (currentGame === "guess") {
       const guess = parseInt(command);
       if (isNaN(guess)) {
-        response = ["Veuillez entrer un nombre valide."];
+        response = [ui.invalidNumber];
       } else {
         handleGuess(guess);
         setInput("");
@@ -262,7 +265,7 @@ export function Terminal() {
     } else if (currentGame === "calc") {
       const answer = parseInt(command);
       if (isNaN(answer)) {
-        response = ["Veuillez entrer un nombre valide."];
+        response = [ui.invalidNumber];
       } else {
         handleCalc(answer);
         setInput("");
@@ -295,9 +298,7 @@ export function Terminal() {
                 command as keyof typeof content.terminal.commands
               ];
           } else {
-            response = [
-              `Commande non reconnue. Tapez 'help' pour voir les commandes disponibles.`,
-            ];
+            response = [ui.unknownCommand];
           }
       }
     }
@@ -310,7 +311,7 @@ export function Terminal() {
     <div
       className="group relative z-0"
       role="region"
-      aria-label="Terminal interactif"
+      aria-label={ui.region}
     >
       <div className="absolute -inset-1 bg-linear-to-r from-rose-400/30 via-sky-400/30 to-violet-400/30 rounded-2xl blur-2xl opacity-50 group-hover:opacity-75 transition duration-500" />
 
@@ -323,22 +324,22 @@ export function Terminal() {
         <div
           className="flex items-center gap-2 border-b bg-muted/50 px-4 py-2.5 rounded-t-xl"
           role="toolbar"
-          aria-label="Barre d'outils du terminal"
+          aria-label={ui.toolbar}
         >
           <div className="flex gap-1.5">
             <button
               className="h-3 w-3 rounded-full bg-red-500 transition-transform hover:scale-110"
-              aria-label="Bouton rouge (décoratif)"
+              aria-label={ui.redButton}
               tabIndex={-1}
             />
             <button
               className="h-3 w-3 rounded-full bg-yellow-500 transition-transform hover:scale-110"
-              aria-label="Bouton jaune (décoratif)"
+              aria-label={ui.yellowButton}
               tabIndex={-1}
             />
             <button
               className="h-3 w-3 rounded-full bg-green-500 transition-transform hover:scale-110"
-              aria-label="Bouton vert (décoratif)"
+              aria-label={ui.greenButton}
               tabIndex={-1}
             />
           </div>
@@ -383,7 +384,7 @@ export function Terminal() {
             onSubmit={handleSubmit}
             className="flex items-center gap-2"
             role="search"
-            aria-label="Ligne de commande"
+            aria-label={ui.commandLine}
           >
             <ChevronRight
               className="h-4 w-4 text-green-500 shrink-0"
@@ -398,7 +399,7 @@ export function Terminal() {
               autoFocus
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
-              aria-label="Entrez une commande"
+              aria-label={ui.commandInput}
               role="combobox"
               aria-autocomplete="list"
               aria-expanded="false"

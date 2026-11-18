@@ -2,9 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Terminal } from "@/components/Terminal";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
-import content from "@/data/content.json";
+import { useContent } from "@/i18n/LanguageProvider";
 
 export function Hero() {
+  const content = useContent();
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -56,13 +57,13 @@ export function Hero() {
                   size="lg"
                   variant={button.variant as "default" | "outline"}
                   onClick={
-                    button.text === "Me contacter"
+                    button.action === "contact"
                       ? handleContactClick
                       : undefined
                   }
-                  asChild={button.text === "Voir mes projets"}
+                  asChild={button.action === "projects"}
                 >
-                  {button.text === "Voir mes projets" ? (
+                  {button.action === "projects" ? (
                     <a href="#projects">{button.text}</a>
                   ) : (
                     button.text

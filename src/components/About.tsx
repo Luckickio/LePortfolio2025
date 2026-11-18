@@ -1,6 +1,6 @@
 import { Server, Code, Brain, Palette } from "lucide-react";
 import { motion } from "motion/react";
-import content from "@/data/content.json";
+import { useContent } from "@/i18n/LanguageProvider";
 
 const icons = {
   code: Code,
@@ -10,6 +10,8 @@ const icons = {
 };
 
 export function About() {
+  const content = useContent();
+
   return (
     <motion.section
       className="py-12"

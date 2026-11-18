@@ -1,0 +1,437 @@
+{
+  "seo": {
+    "title": "Lucas GUELL - Desarrollador Full Stack y Data Analyst",
+    "description": "Portfolio de Lucas GUELL, desarrollador Full Stack y Data Analyst. Especializado en el desarrollo de aplicaciones web modernas con React y Next.js, y en el análisis de datos con Python.",
+    "keywords": "desarrollador full stack, data analyst, react, next.js, python, ciencia de datos, Marsella",
+    "author": "Lucas GUELL",
+    "ogImage": "/assets/projects/LePortfolio2025.png"
+  },
+  "header": {
+    "name": "Lucas GUELL",
+    "navigation": [
+      {
+        "label": "Sobre mí",
+        "href": "#about"
+      },
+      {
+        "label": "Habilidades",
+        "href": "#skills"
+      },
+      {
+        "label": "Formación",
+        "href": "#education"
+      },
+      {
+        "label": "Proyectos",
+        "href": "#projects"
+      },
+      {
+        "label": "Contacto",
+        "href": "#contact"
+      }
+    ]
+  },
+  "hero": {
+    "title": "Desarrollador Full Stack y Data Analyst",
+    "description": "Especializado en el desarrollo de aplicaciones web modernas y en el análisis de datos. Competente en React, Next.js y Python para la ciencia de datos.",
+    "buttons": [
+      {
+        "text": "Ver mis proyectos",
+        "variant": "default",
+        "action": "projects"
+      },
+      {
+        "text": "Contactarme",
+        "variant": "outline",
+        "action": "contact"
+      }
+    ]
+  },
+  "terminal": {
+    "welcome": "¡Bienvenido! Escribe 'help' para ver los comandos disponibles.",
+    "commands": {
+      "help": [
+        "Comandos disponibles:",
+        "  about     - Saber más sobre mí",
+        "  skills    - Ver mis habilidades técnicas",
+        "  projects  - Lista de mis proyectos",
+        "  contact   - Mis datos de contacto",
+        "  games     - Lista de juegos disponibles",
+        "  clear     - Limpiar el terminal"
+      ],
+      "games": [
+        "Juegos disponibles:",
+        "",
+        "  guess     - Adivina un número entre 1 y 100",
+        "  calc      - Juego de cálculo mental",
+        "",
+        "Comandos durante el juego:",
+        "  exit / q    - Salir del juego actual"
+      ],
+      "about": [
+        "Lucas GUELL - Desarrollador Full Stack y Data Analyst",
+        "",
+        "Apasionado por la informática desde los 14 años, empecé explorando",
+        "la ciberseguridad antes de orientarme hacia el desarrollo.",
+        "Hoy me especializo en Desarrollo Full Stack y",
+        "Análisis de Datos. Soy muy minucioso en mi aprendizaje",
+        "y doy gran importancia al código abierto, a la protección",
+        "de la privacidad y a la confidencialidad de los datos."
+      ],
+      "skills": [
+        "Habilidades técnicas:",
+        "",
+        "Desarrollo Full Stack:",
+        "  • HTML / CSS, Tailwind CSS",
+        "  • JavaScript, TypeScript",
+        "  • React, Next.js",
+        "  • PHP, SQL, MongoDB",
+        "",
+        "Data Science y Lenguajes:",
+        "  • Python (pandas, numpy, scikit-learn, tensorflow, Plotly, Dash)",
+        "  • R",
+        "  • C, C#, Rust",
+        "  • Bash",
+        "",
+        "Herramientas y Entorno:",
+        "  • Git, Docker",
+        "  • VSCodium, JupyterLab, RStudio",
+        "  • DBeaver, Hoppscotch",
+        "  • Figma",
+        "  • Claude Code",
+        "  • Fedora, Windows 11"
+      ],
+      "projects": [
+        "Proyectos principales:",
+        "",
+        "1. Analyse Démographique Mondiale",
+        "   • Python, CSS3, Dash, Plotly, Pandas, Docker",
+        "   • Aplicación web interactiva para visualizar y analizar las tendencias demográficas mundiales de 1960 a 2018",
+        "",
+        "2. Le portfolio (2025)",
+        "   • HTML, CSS, Tailwind CSS, TypeScript, React, ShadCN UI",
+        "   • Portfolio (actual)",
+        "",
+        "3. Le portfolio (2023)",
+        "   • HTML, CSS, JavaScript, React",
+        "   • Portfolio de 2023 realizado principalmente con la biblioteca React",
+        "",
+        "4. GCR GSB",
+        "   • PHP, HTML, CSS, PostgreSQL",
+        "   • Aplicación web de gestión de farmacopea y de lista de profesionales sanitarios"
+      ],
+      "contact": [
+        "Contáctame:",
+        "",
+        "Email    : contact@lucasguell.com",
+        "GitHub   : github.com/Luckickio",
+        "LinkedIn : linkedin.com/in/lucasguell"
+      ],
+      "rm -rf /": [
+        "Vale, tampoco nos pasemos..."
+      ]
+    }
+  },
+  "about": {
+    "title": "Sobre mí",
+    "introduction": {
+      "title": "Desarrollador Full Stack y Data Analyst",
+      "description": "Apasionado por la informática desde los 14 años, empecé explorando la ciberseguridad antes de orientarme hacia el desarrollo. Hoy me especializo en Desarrollo Full Stack y Análisis de Datos. Soy muy minucioso en mi aprendizaje y doy gran importancia al código abierto, a la protección de la privacidad y a la confidencialidad de los datos."
+    },
+    "specializations": [
+      {
+        "title": "Desarrollo Full Stack",
+        "description": "Diseño y desarrollo de aplicaciones web completas con tecnologías modernas como React, Next.js y Tailwind CSS, integrando prácticas DevOps para garantizar una entrega continua y una gestión óptima.",
+        "icon": "code"
+      },
+      {
+        "title": "Análisis de Datos y Data Science",
+        "description": "Explotación de grandes volúmenes de datos e implementación de modelos de análisis con Python y R, utilizando bibliotecas como Pandas, NumPy y Scikit-learn para extraer información clave y mejorar la toma de decisiones.",
+        "icon": "brain"
+      },
+      {
+        "title": "Diseño UI/UX",
+        "description": "Creación de interfaces de usuario intuitivas y estéticas, con herramientas como Figma, para ofrecer una experiencia fluida y agradable en todas las plataformas.",
+        "icon": "palette"
+      }
+    ]
+  },
+  "education": {
+    "experiences": [
+      {
+        "school": "Aix-Marseille Université – Campus de Luminy, Marseille",
+        "period": "2024 - 2025",
+        "degree": "Grado profesional (Licence professionnelle) en Inteligencia de Negocio y Estadística, itinerario Informática de Gestión, Estadística y Big Data",
+        "description": "Licence professionnelle (grado profesional) en Inteligencia de Negocio y Estadística.",
+        "image": "/assets/Educations/aix-marseille-universite-faculte-des-sciences.svg"
+      },
+      {
+        "school": "Lycée Victor Hugo, Marseille",
+        "period": "2021 - 2023",
+        "degree": "BTS (título técnico superior de dos años) en Servicios Informáticos para Organizaciones (SIO), opción B: Soluciones de Software y Aplicaciones de Negocio (SLAM)",
+        "description": [
+          "Título BTS en Servicios Informáticos para Organizaciones (SIO), opción B: Soluciones de Software y Aplicaciones de Negocio (SLAM)",
+          "Certificado CCNA Cybersecurity Operations"
+        ],
+        "image": "/assets/Educations/lycee-victor-hugo-marseille.png"
+      },
+      {
+        "school": "Lycée Thiers, Marseille",
+        "period": "2019 - 2020",
+        "degree": "Último curso de bachillerato científico (S), opción Ciencias de la Ingeniería",
+        "description": "Baccalauréat francés, modalidad científica (S), opción Ciencias de la Ingeniería",
+        "image": "/assets/Educations/lycee-thiers-marseille.svg"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "category": "Desarrollo Full Stack",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Next.js",
+        "PHP",
+        "PostgreSQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "category": "Data Science y Lenguajes",
+      "technologies": [
+        "Python",
+        "R",
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "TensorFlow",
+        "Plotly",
+        "Dash",
+        "C",
+        "C#",
+        "Rust",
+        "Bash"
+      ]
+    },
+    {
+      "category": "Herramientas y Entorno",
+      "technologies": [
+        "Git",
+        "Docker",
+        "VSCodium",
+        "JupyterLab",
+        "RStudio",
+        "DBeaver",
+        "Hoppscotch",
+        "Figma",
+        "Claude Code",
+        "Fedora",
+        "Windows 11"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Analyse Démographique Mondiale",
+      "description": "Una aplicación web interactiva para visualizar y analizar las tendencias demográficas mundiales de 1960 a 2018.",
+      "image": {
+        "src": "/assets/projects/ADM.png"
+      },
+      "technologies": [
+        {
+          "name": "Python"
+        },
+        {
+          "name": "CSS3"
+        },
+        {
+          "name": "Dash"
+        },
+        {
+          "name": "Plotly"
+        },
+        {
+          "name": "Pandas"
+        },
+        {
+          "name": "Docker"
+        }
+      ],
+      "sourceUrl": "https://github.com/Luckickio/analyse-demographique-mondiale"
+    },
+    {
+      "title": "Le Portfolio (2025)",
+      "description": "Portfolio actual realizado con HTML, CSS, Tailwind CSS, TypeScript, React y ShadCN UI.",
+      "image": {
+        "src": "/assets/projects/LePortfolio2025.png"
+      },
+      "technologies": [
+        {
+          "name": "HTML5"
+        },
+        {
+          "name": "CSS3"
+        },
+        {
+          "name": "Tailwind CSS"
+        },
+        {
+          "name": "TypeScript"
+        },
+        {
+          "name": "React"
+        },
+        {
+          "name": "Shadcn/ui"
+        },
+        {
+          "name": "Motion"
+        }
+      ],
+      "sourceUrl": "https://github.com/Luckickio/LePortfolio2025",
+      "liveUrl": "https://lucasguell.com/"
+    },
+    {
+      "title": "Le Portfolio (2023)",
+      "description": "Portfolio de 2023 realizado principalmente con la biblioteca React.",
+      "image": {
+        "src": "/assets/projects/LePortfolio2023.png"
+      },
+      "technologies": [
+        {
+          "name": "HTML5"
+        },
+        {
+          "name": "CSS3"
+        },
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "React"
+        }
+      ],
+      "sourceUrl": "https://github.com/Luckickio/LePortfolio2023",
+      "liveUrl": "https://lucasguell.com/Projects/LePortfolio2023/"
+    },
+    {
+      "title": "GCR GSB",
+      "description": "Aplicación web de gestión de farmacopea y de lista de profesionales sanitarios. Permite gestionar y consultar los medicamentos, así como consultar una lista actualizada de profesionales.",
+      "image": {
+        "src": "/assets/projects/GCR.png"
+      },
+      "technologies": [
+        {
+          "name": "PHP"
+        },
+        {
+          "name": "HTML5"
+        },
+        {
+          "name": "CSS3"
+        },
+        {
+          "name": "PostgreSQL"
+        }
+      ],
+      "sourceUrl": "https://github.com/Luckickio/gcr-gsb"
+    }
+  ],
+  "contact": {
+    "title": "Contacto",
+    "description": "No dudes en contactarme para cualquier pregunta o solicitud.",
+    "email": "contact@lucasguell.com",
+    "location": "Marsella, Francia",
+    "github": "github.com/Luckickio",
+    "linkedin": "linkedin.com/in/lucasguell",
+    "pgpKey": "-----BEGIN PGP PUBLIC KEY BLOCK-----\nComment: ID utilisateur:\tLucas GUELL <contact@lucasguell.com>\nComment: Valide à partir de:\t17/03/2025 10:31\nComment: Valide jusqu'à:\t17/03/2028 12:00\nComment: Type:\t255-bit EdDSA (certificat secret disponible)\nComment: Utilisation:\tSignature, Chiffrement, Certification des identifiants utilisateur\nComment: Empreinte:\tA2A4993AC1522B03FAFF0FE09A110545B987807F\n\n\nmDMEZ9fr2BYJKwYBBAHaRw8BAQdA+4fUU8nJ3GiwDOAfKTb637TTYLnQjma4Lg0v\nVHTcorS0JEx1Y2FzIEdVRUxMIDxjb250YWN0QGx1Y2FzZ3VlbGwuY29tPoiZBBMW\nCgBBFiEEoqSZOsFSKwP6/w/gmhEFRbmHgH8FAmfX69gCGwMFCQWlANgFCwkIBwIC\nIgIGFQoJCAsCBBYCAwECHgcCF4AACgkQmhEFRbmHgH/6RgD/b/f6TtFS9gRcyF5T\ndfxNQRJx0lAvMQmBK47zfYaiXUwA/AsVm63ltyNIWebQszhuCpOEAWTHWQiqv4uI\nQjjkIpQHuDgEZ9fr2BIKKwYBBAGXVQEFAQEHQEML8v/Sjro6hQGjKkXslJDH6JGx\nPcHc0wRU/+xvWY1FAwEIB4h+BBgWCgAmFiEEoqSZOsFSKwP6/w/gmhEFRbmHgH8F\nAmfX69gCGwwFCQWlANgACgkQmhEFRbmHgH8IfgEAymYNx5loh6nFun4OoDoZglzx\nIv7AbDZ1l5nmXEYdU1sA/jGeO5sA5j1KvCfkmiodEVnjVM1vfY0VP09mJOrBzxcD\n=gtOG\n-----END PGP PUBLIC KEY BLOCK-----",
+    "social": {
+      "github": {
+        "label": "GitHub",
+        "description": "Descubre mis proyectos de código abierto"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "description": "Conectemos profesionalmente"
+      }
+    }
+  },
+  "ui": {
+    "header": {
+      "mainNavigation": "Navegación principal",
+      "mobileNavigation": "Menú móvil",
+      "openMenu": "Abrir el menú de navegación",
+      "menuTitle": "Menú de navegación",
+      "changeTheme": "Cambiar el tema (actual: {theme})",
+      "changeLanguage": "Cambiar de idioma (actual: {language})",
+      "themes": {
+        "light": "Claro",
+        "dark": "Oscuro",
+        "system": "Sistema"
+      }
+    },
+    "pronunciation": "Escuchar la pronunciación",
+    "skills": {
+      "title": "Habilidades"
+    },
+    "education": {
+      "title": "Formación"
+    },
+    "projects": {
+      "title": "Proyectos",
+      "resetFilters": "Restablecer filtros",
+      "resetFiltersCount": "Restablecer filtros ({count})",
+      "filterBy": "Filtrar por {tech}",
+      "previewAlt": "Vista previa del proyecto {title}",
+      "source": "Código",
+      "live": "Sitio",
+      "noResults": "Ningún proyecto coincide con las tecnologías seleccionadas."
+    },
+    "contact": {
+      "letsTalk": "Hablemos",
+      "contactMe": "Contactarme",
+      "copyPgp": "Copiar mi clave PGP",
+      "pgpCopied": "¡Clave PGP copiada!",
+      "socialTitle": "Redes sociales",
+      "socialDescription": "Sígueme en las redes sociales para estar al día de mis novedades y proyectos."
+    },
+    "footer": {
+      "rights": "Todos los derechos reservados."
+    },
+    "terminal": {
+      "region": "Terminal interactivo",
+      "toolbar": "Barra de herramientas del terminal",
+      "redButton": "Botón rojo (decorativo)",
+      "yellowButton": "Botón amarillo (decorativo)",
+      "greenButton": "Botón verde (decorativo)",
+      "commandLine": "Línea de comandos",
+      "commandInput": "Introduce un comando",
+      "unknownCommand": "Comando no reconocido. Escribe 'help' para ver los comandos disponibles.",
+      "noGame": "No hay ningún juego en curso.",
+      "invalidNumber": "Introduce un número válido.",
+      "gameOver": "Juego terminado.",
+      "exitHint": "Escribe \"exit\" para salir.",
+      "guess": {
+        "start": "¡Juego de adivinanza iniciado!",
+        "prompt": "Adivina un número entre 1 y 100.",
+        "win": "¡Bravo! ¡Has encontrado el número {number} en {count} intentos!",
+        "lower": "El número es menor que {guess}",
+        "higher": "El número es mayor que {guess}",
+        "replay": "Escribe \"guess\" para volver a jugar."
+      },
+      "calc": {
+        "start": "¡Juego de cálculo mental iniciado!",
+        "question": "¿Cuánto es {a} {operator} {b}?",
+        "correct": "¡Correcto! Puntuación: {score}",
+        "next": "Nuevo cálculo: {a} {operator} {b}?",
+        "wrong": "¡Incorrecto! La respuesta era {answer}",
+        "finalScore": "Puntuación final: {score}",
+        "replay": "Escribe \"calc\" para volver a jugar."
+      }
+    }
+  }
+}

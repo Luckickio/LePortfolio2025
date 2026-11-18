@@ -4,9 +4,10 @@ import { Mail, MapPin, Send, Key, Check } from "lucide-react";
 import { Github, Linkedin } from "@/components/BrandIcons";
 import { motion } from "motion/react";
 import { useState } from "react";
-import content from "@/data/content.json";
+import { useContent } from "@/i18n/LanguageProvider";
 
 export function Contact() {
+  const content = useContent();
   const [copied, setCopied] = useState(false);
 
   const handleCopyPGP = async () => {
@@ -52,7 +53,7 @@ export function Contact() {
               <div className="p-4 sm:p-6 md:p-8 flex flex-col">
                 <div className="mb-6">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
-                    Parlons ensemble
+                    {content.ui.contact.letsTalk}
                   </h3>
                   <p className="text-sm sm:text-base text-muted-foreground">
                     {content.contact.description}
@@ -101,7 +102,7 @@ export function Contact() {
                   >
                     <a href={`mailto:${content.contact.email}`}>
                       <Send className="h-4 w-4" />
-                      Me contacter
+                      {content.ui.contact.contactMe}
                     </a>
                   </Button>
                   <Button
@@ -112,12 +113,12 @@ export function Contact() {
                     {copied ? (
                       <>
                         <Check className="h-4 w-4" />
-                        Clé PGP copiée !
+                        {content.ui.contact.pgpCopied}
                       </>
                     ) : (
                       <>
                         <Key className="h-4 w-4" />
-                        Copier ma clé PGP
+                        {content.ui.contact.copyPgp}
                       </>
                     )}
                   </Button>
@@ -127,11 +128,10 @@ export function Contact() {
               <div className="p-4 sm:p-6 md:p-8 flex flex-col">
                 <div className="mb-6">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">
-                    Réseaux sociaux
+                    {content.ui.contact.socialTitle}
                   </h3>
                   <p className="text-sm sm:text-base text-muted-foreground">
-                    Retrouvez-moi sur les réseaux sociaux pour suivre mon
-                    actualité et mes projets.
+                    {content.ui.contact.socialDescription}
                   </p>
                 </div>
 
@@ -144,7 +144,7 @@ export function Contact() {
                   >
                     <Button
                       variant="outline"
-                      className="w-full justify-start gap-2 h-auto p-3 sm:p-4"
+                      className="w-full justify-start gap-2 h-auto p-3 sm:p-4 whitespace-normal text-left"
                       asChild
                     >
                       <a
@@ -156,7 +156,7 @@ export function Contact() {
                         <div className="shrink-0 rounded-full bg-primary/10 p-1.5 sm:p-2">
                           <Github className="h-4 w-4 sm:h-5 sm:w-5" />
                         </div>
-                        <div className="ml-2 sm:ml-3">
+                        <div className="ml-2 sm:ml-3 min-w-0">
                           <span className="block font-medium text-sm sm:text-base">
                             {content.contact.social.github.label}
                           </span>
@@ -176,7 +176,7 @@ export function Contact() {
                   >
                     <Button
                       variant="outline"
-                      className="w-full justify-start gap-2 h-auto p-3 sm:p-4"
+                      className="w-full justify-start gap-2 h-auto p-3 sm:p-4 whitespace-normal text-left"
                       asChild
                     >
                       <a
@@ -188,7 +188,7 @@ export function Contact() {
                         <div className="shrink-0 rounded-full bg-primary/10 p-1.5 sm:p-2">
                           <Linkedin className="h-4 w-4 sm:h-5 sm:w-5" />
                         </div>
-                        <div className="ml-2 sm:ml-3">
+                        <div className="ml-2 sm:ml-3 min-w-0">
                           <span className="block font-medium text-sm sm:text-base">
                             {content.contact.social.linkedin.label}
                           </span>

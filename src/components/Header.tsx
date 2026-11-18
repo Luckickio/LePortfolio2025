@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MoonIcon, SunIcon, Menu, LaptopIcon } from "lucide-react";
+import { MoonIcon, SunIcon, Menu, LaptopIcon, Languages } from "lucide-react";
 import { useTheme } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
 import {
@@ -15,7 +15,18 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { NamePronunciation } from "@/components/NamePronunciation";
-import content from "@/data/content.json";
+import {
+  useLanguage,
+  languages,
+  format,
+  type Language,
+} from "@/i18n/LanguageProvider";
+
+const themes = [
+  { value: "light", Icon: SunIcon },
+  { value: "dark", Icon: MoonIcon },
+  { value: "system", Icon: LaptopIcon },
+] as const;
 
 function ThemeIcon({ theme }: { theme: string }) {
   if (theme === "system") return <LaptopIcon className="h-5 w-5" />;
@@ -23,8 +34,83 @@ function ThemeIcon({ theme }: { theme: string }) {
   return <SunIcon className="h-5 w-5" />;
 }
 
-export function Header() {
+function ThemeMenu() {
   const { theme, setTheme } = useTheme();
+  const { content } = useLanguage();
+  const labels = content.ui.header.themes;
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="h-9 w-9"
+          aria-label={format(content.ui.header.changeTheme, {
+            theme: labels[theme],
+          })}
+        >
+          <ThemeIcon theme={theme} />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        {themes.map(({ value, Icon }) => (
+          <DropdownMenuItem
+            key={value}
+            onClick={() => setTheme(value)}
+            className={theme === value ? "bg-accent" : ""}
+            role="menuitemradio"
+            aria-checked={theme === value}
+          >
+            <Icon className="mr-2 h-4 w-4" />
+            <span>{labels[value]}</span>
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+function LanguageMenu() {
+  const { language, setLanguage, content } = useLanguage();
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="h-9 w-9"
+          aria-label={format(content.ui.header.changeLanguage, {
+            language: languages[language].label,
+          })}
+        >
+          <Languages className="h-5 w-5" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        {(Object.keys(languages) as Language[]).map((code) => (
+          <DropdownMenuItem
+            key={code}
+            onClick={() => setLanguage(code)}
+            className={language === code ? "bg-accent" : ""}
+            role="menuitemradio"
+            aria-checked={language === code}
+            lang={code}
+          >
+            <span className="mr-2 w-6 text-xs font-semibold uppercase text-muted-foreground">
+              {code}
+            </span>
+            <span>{languages[code].label}</span>
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+export function Header() {
+  const { content } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -36,7 +122,7 @@ export function Header() {
         <nav
           className="flex h-16 items-center justify-between"
           role="navigation"
-          aria-label="Navigation principale"
+          aria-label={content.ui.header.mainNavigation}
         >
           <div className="flex items-center gap-2">
             <span className="text-xl font-semibold">{content.header.name}</span>
@@ -56,91 +142,15 @@ export function Header() {
                 </a>
               ))}
             </div>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="h-9 w-9"
-                  aria-label={`Changer le thème (actuellement en mode ${theme})`}
-                >
-                  <ThemeIcon theme={theme} />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem
-                  onClick={() => setTheme("light")}
-                  className={theme === "light" ? "bg-accent" : ""}
-                  role="menuitemradio"
-                  aria-checked={theme === "light"}
-                >
-                  <SunIcon className="mr-2 h-4 w-4" />
-                  <span>Clair</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => setTheme("dark")}
-                  className={theme === "dark" ? "bg-accent" : ""}
-                  role="menuitemradio"
-                  aria-checked={theme === "dark"}
-                >
-                  <MoonIcon className="mr-2 h-4 w-4" />
-                  <span>Sombre</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => setTheme("system")}
-                  className={theme === "system" ? "bg-accent" : ""}
-                  role="menuitemradio"
-                  aria-checked={theme === "system"}
-                >
-                  <LaptopIcon className="mr-2 h-4 w-4" />
-                  <span>Système</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <div className="flex items-center gap-1">
+              <LanguageMenu />
+              <ThemeMenu />
+            </div>
           </div>
 
           <div className="md:hidden flex items-center gap-2">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="h-9 w-9"
-                  aria-label={`Changer le thème (actuellement en mode ${theme})`}
-                >
-                  <ThemeIcon theme={theme} />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem
-                  onClick={() => setTheme("light")}
-                  className={theme === "light" ? "bg-accent" : ""}
-                  role="menuitemradio"
-                  aria-checked={theme === "light"}
-                >
-                  <SunIcon className="mr-2 h-4 w-4" />
-                  <span>Clair</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => setTheme("dark")}
-                  className={theme === "dark" ? "bg-accent" : ""}
-                  role="menuitemradio"
-                  aria-checked={theme === "dark"}
-                >
-                  <MoonIcon className="mr-2 h-4 w-4" />
-                  <span>Sombre</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => setTheme("system")}
-                  className={theme === "system" ? "bg-accent" : ""}
-                  role="menuitemradio"
-                  aria-checked={theme === "system"}
-                >
-                  <LaptopIcon className="mr-2 h-4 w-4" />
-                  <span>Système</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <LanguageMenu />
+            <ThemeMenu />
 
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
@@ -148,17 +158,17 @@ export function Header() {
                   variant="ghost"
                   size="icon"
                   className="h-9 w-9"
-                  aria-label="Ouvrir le menu de navigation"
+                  aria-label={content.ui.header.openMenu}
                 >
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
-                <SheetTitle>Menu de navigation</SheetTitle>
+                <SheetTitle>{content.ui.header.menuTitle}</SheetTitle>
                 <nav
                   className="flex flex-col gap-4 mt-8"
                   role="navigation"
-                  aria-label="Menu mobile"
+                  aria-label={content.ui.header.mobileNavigation}
                 >
                   {content.header.navigation.map((item, index) => (
                     <a

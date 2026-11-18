@@ -1,21 +1,10 @@
 import { useEffect } from "react";
-import seoData from "@/data/seo.json";
+import { useContent } from "@/i18n/LanguageProvider";
 
-interface SEOProps {
-  title?: string;
-  author?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-}
+export function useSEO() {
+  const { title, description, keywords, ogImage: image, author } =
+    useContent().seo;
 
-export function useSEO({
-  title = seoData.title,
-  description = seoData.description,
-  keywords = seoData.keywords,
-  image = seoData.ogImage,
-  author = seoData.author,
-}: SEOProps = {}) {
   useEffect(() => {
     document.title = title;
 

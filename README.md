@@ -19,12 +19,13 @@ Site en ligne : [lucasguell.com](https://lucasguell.com)
 
 - **Terminal interactif** : console intégrée à la page d'accueil. La commande `help` liste les commandes disponibles : présentation, compétences, projets, contact. La commande `games` donne accès à deux mini-jeux, `guess` (deviner un nombre) et `calc` (calcul mental).
 - **Projets filtrables** : chaque projet affiche les logos de ses technologies, et la liste peut être filtrée par technologie.
+- **Trois langues (anglais, français, espagnol)** : la langue suit celle du navigateur (anglais par défaut), et un sélecteur permet d'en changer ; le choix du visiteur est mémorisé.
 - **Thème clair, sombre ou système** : le thème suit la préférence de l'appareil, et le choix du visiteur est mémorisé.
 - **Prononciation du nom** : lecture audio intégrée à l'en-tête.
 - **Clé PGP publique** : copiable en un clic depuis la section Contact.
 - **Animations** : apparitions au défilement avec Motion, désactivées lorsque le système demande de réduire les animations.
 - **Responsive** : mise en page adaptée du mobile (menu latéral) au grand écran.
-- **Contenu séparé du code** : l'ensemble des textes est stocké dans un fichier JSON (voir [Modification du contenu](#modification-du-contenu)).
+- **Contenu séparé du code** : l'ensemble des textes est stocké dans un fichier JSON par langue (voir [Modification du contenu](#modification-du-contenu)).
 
 ## Sections
 
@@ -86,20 +87,24 @@ Remarque : ouvrir `dist/index.html` directement depuis le disque affiche une pag
     ├── index.css            # Thème Tailwind (couleurs, modes clair et sombre)
     ├── components/          # Sections du site (Hero, About, Projects, etc.)
     │   └── ui/              # Composants shadcn/ui
-    ├── data/
-    │   ├── content.json     # Textes du site
-    │   └── seo.json         # Titre, description et image de partage
+    ├── data/locales/        # Textes du site, un fichier par langue
+    │   ├── en.json
+    │   ├── fr.json
+    │   └── es.json
+    ├── i18n/                # Détection et changement de langue
     ├── hooks/useSEO.ts      # Mise à jour des balises meta
     └── assets/              # Logos et fichier audio importés dans le code
 ```
 
 ## Modification du contenu
 
-Les textes ne sont pas écrits dans les composants : ils sont centralisés dans [`src/data/content.json`](src/data/content.json). Ce fichier contient la navigation, l'accueil, les réponses du terminal, la section À propos, les formations, les compétences, les projets et le contact. Ajouter un projet ou modifier une formation ne demande donc qu'une modification de ce fichier.
+Les textes ne sont pas écrits dans les composants : ils sont centralisés dans un fichier par langue, dans [`src/data/locales/`](src/data/locales/) (`en.json`, `fr.json`, `es.json`). Chaque fichier contient le référencement (titre, description), la navigation, l'accueil, les réponses du terminal, la section À propos, les formations, les compétences, les projets, le contact et les libellés de l'interface (`ui`).
+
+Les trois fichiers ont la même structure : une modification de contenu (ajout d'un projet, d'une formation…) doit être reportée dans chacun d'eux.
 
 Emplacement des images :
 
-- **Image référencée dans `content.json`** (capture de projet, logo d'établissement) : à placer dans `public/assets/`. Le chemin s'écrit sans `public`, par exemple `"/assets/projects/Projet.png"`.
+- **Image référencée dans les fichiers de langue** (capture de projet, logo d'établissement) : à placer dans `public/assets/`. Le chemin s'écrit sans `public`, par exemple `"/assets/projects/Projet.png"`.
 - **Image importée dans un composant** (logo de technologie) : à placer dans `src/assets/` et à importer avec `import logo from "@/assets/..."`.
 
 ## Déploiement

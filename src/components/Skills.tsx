@@ -1,13 +1,15 @@
 import { motion } from 'motion/react';
 import { TechLogo } from './TechLogo';
 import { Card } from '@/components/ui/card';
-import content from '@/data/content.json';
+import { useContent } from "@/i18n/LanguageProvider";
 
 export function Skills() {
+  const content = useContent();
+
   return (
     <section className="py-12">
       <h2 className="mb-8 text-2xl font-semibold tracking-tight bg-linear-to-r from-primary/80 to-primary bg-clip-text text-transparent">
-        Compétences
+        {content.ui.skills.title}
       </h2>
 
       <div className="grid md:grid-cols-3 gap-8">

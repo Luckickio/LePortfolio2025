@@ -5,11 +5,12 @@ import { Globe } from "lucide-react";
 import { Github } from "@/components/BrandIcons";
 import { motion } from "motion/react";
 import { useState, useMemo } from "react";
-import content from "@/data/content.json";
+import { useContent, format } from "@/i18n/LanguageProvider";
 import { TechLogo } from "./TechLogo";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 export function Projects() {
+  const content = useContent();
   const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
 
   const allTechnologies = useMemo(() => {
@@ -20,7 +21,7 @@ export function Projects() {
       });
     });
     return Array.from(techSet).sort();
-  }, []);
+  }, [content.projects]);
 
   const filteredProjects = useMemo(() => {
     if (selectedTechs.length === 0) return content.projects;
@@ -30,7 +31,7 @@ export function Projects() {
       );
       return selectedTechs.every((tech) => projectTechs.has(tech));
     });
-  }, [selectedTechs]);
+  }, [selectedTechs, content.projects]);
 
   const resetFilters = () => {
     setSelectedTechs([]);
@@ -47,7 +48,7 @@ export function Projects() {
       <div className="flex flex-col space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <h2 className="text-2xl font-semibold tracking-tight bg-linear-to-r from-primary/80 to-primary bg-clip-text text-transparent">
-            Projets
+            {content.ui.projects.title}
           </h2>
           {selectedTechs.length > 0 && (
             <Button
@@ -56,7 +57,7 @@ export function Projects() {
               onClick={resetFilters}
               className="self-start sm:self-auto"
             >
-              Réinitialiser les filtres ({selectedTechs.length})
+              {format(content.ui.projects.resetFiltersCount, { count: selectedTechs.length })}
             </Button>
           )}
         </div>
@@ -71,7 +72,7 @@ export function Projects() {
             <ToggleGroupItem
               key={tech}
               value={tech}
-              aria-label={`Filter by ${tech}`}
+              aria-label={format(content.ui.projects.filterBy, { tech })}
               className="flex items-center gap-2 data-[state=on]:bg-primary data-[state=on]:text-primary-foreground transition-all"
             >
               <TechLogo name={tech} size="sm" />
@@ -94,7 +95,7 @@ export function Projects() {
                 <div className="aspect-video w-full overflow-hidden">
                   <img
                     src={project.image.src}
-                    alt={`Aperçu du projet ${project.title}`}
+                    alt={format(content.ui.projects.previewAlt, { title: project.title })}
                     className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                   />
                 </div>
@@ -146,7 +147,7 @@ export function Projects() {
                           className="flex items-center justify-center gap-2"
                         >
                           <Github className="h-4 w-4" />
-                          Sources
+                          {content.ui.projects.source}
                         </a>
                       </Button>
                       {project.liveUrl && (
@@ -158,7 +159,7 @@ export function Projects() {
                             className="flex items-center justify-center gap-2"
                           >
                             <Globe className="h-4 w-4" />
-                            Site
+                            {content.ui.projects.live}
                           </a>
                         </Button>
                       )}
@@ -177,10 +178,10 @@ export function Projects() {
             className="text-center py-12"
           >
             <p className="text-lg text-muted-foreground">
-              Aucun projet ne correspond aux technologies sélectionnées.
+              {content.ui.projects.noResults}
             </p>
             <Button variant="outline" className="mt-4" onClick={resetFilters}>
-              Réinitialiser les filtres
+              {content.ui.projects.resetFilters}
             </Button>
           </motion.div>
         )}

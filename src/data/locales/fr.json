@@ -1,4 +1,11 @@
 {
+  "seo": {
+    "title": "Lucas GUELL - Développeur Full Stack & Data Analyst",
+    "description": "Portfolio de Lucas GUELL, développeur Full Stack et Data Analyst. Spécialisé dans le développement d'applications web modernes avec React et Next.js, et l'analyse de données avec Python.",
+    "keywords": "développeur full stack, data analyst, react, next.js, python, data science, Marseille",
+    "author": "Lucas GUELL",
+    "ogImage": "/assets/projects/LePortfolio2025.png"
+  },
   "header": {
     "name": "Lucas GUELL",
     "navigation": [
@@ -30,11 +37,13 @@
     "buttons": [
       {
         "text": "Voir mes projets",
-        "variant": "default"
+        "variant": "default",
+        "action": "projects"
       },
       {
         "text": "Me contacter",
-        "variant": "outline"
+        "variant": "outline",
+        "action": "contact"
       }
     ]
   },
@@ -348,6 +357,80 @@
       "linkedin": {
         "label": "LinkedIn",
         "description": "Connectons-nous professionnellement"
+      }
+    }
+  },
+  "ui": {
+    "header": {
+      "mainNavigation": "Navigation principale",
+      "mobileNavigation": "Menu mobile",
+      "openMenu": "Ouvrir le menu de navigation",
+      "menuTitle": "Menu de navigation",
+      "changeTheme": "Changer le thème (actuellement : {theme})",
+      "changeLanguage": "Changer de langue (actuellement : {language})",
+      "themes": {
+        "light": "Clair",
+        "dark": "Sombre",
+        "system": "Système"
+      }
+    },
+    "pronunciation": "Écouter la prononciation",
+    "skills": {
+      "title": "Compétences"
+    },
+    "education": {
+      "title": "Parcours"
+    },
+    "projects": {
+      "title": "Projets",
+      "resetFilters": "Réinitialiser les filtres",
+      "resetFiltersCount": "Réinitialiser les filtres ({count})",
+      "filterBy": "Filtrer par {tech}",
+      "previewAlt": "Aperçu du projet {title}",
+      "source": "Sources",
+      "live": "Site",
+      "noResults": "Aucun projet ne correspond aux technologies sélectionnées."
+    },
+    "contact": {
+      "letsTalk": "Parlons ensemble",
+      "contactMe": "Me contacter",
+      "copyPgp": "Copier ma clé PGP",
+      "pgpCopied": "Clé PGP copiée !",
+      "socialTitle": "Réseaux sociaux",
+      "socialDescription": "Retrouvez-moi sur les réseaux sociaux pour suivre mon actualité et mes projets."
+    },
+    "footer": {
+      "rights": "Tous droits réservés."
+    },
+    "terminal": {
+      "region": "Terminal interactif",
+      "toolbar": "Barre d'outils du terminal",
+      "redButton": "Bouton rouge (décoratif)",
+      "yellowButton": "Bouton jaune (décoratif)",
+      "greenButton": "Bouton vert (décoratif)",
+      "commandLine": "Ligne de commande",
+      "commandInput": "Entrez une commande",
+      "unknownCommand": "Commande non reconnue. Tapez 'help' pour voir les commandes disponibles.",
+      "noGame": "Aucun jeu en cours.",
+      "invalidNumber": "Veuillez entrer un nombre valide.",
+      "gameOver": "Jeu terminé.",
+      "exitHint": "Tapez \"exit\" pour quitter.",
+      "guess": {
+        "start": "Jeu de devinette démarré !",
+        "prompt": "Devinez un nombre entre 1 et 100.",
+        "win": "Bravo ! Vous avez trouvé le nombre {number} en {count} essais !",
+        "lower": "Le nombre est plus petit que {guess}",
+        "higher": "Le nombre est plus grand que {guess}",
+        "replay": "Tapez \"guess\" pour rejouer."
+      },
+      "calc": {
+        "start": "Jeu de calcul mental démarré !",
+        "question": "Combien fait {a} {operator} {b} ?",
+        "correct": "Correct ! Score : {score}",
+        "next": "Nouveau calcul : {a} {operator} {b} ?",
+        "wrong": "Incorrect ! La réponse était {answer}",
+        "finalScore": "Score final : {score}",
+        "replay": "Tapez \"calc\" pour rejouer."
       }
     }
   }

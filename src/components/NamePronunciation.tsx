@@ -1,9 +1,11 @@
 import { Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
+import { useContent } from "@/i18n/LanguageProvider";
 import pronunciationSound from "@/assets/NamePronunciation/GUELL_pronunciation.mp3";
 
 export function NamePronunciation() {
+  const content = useContent();
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -40,7 +42,7 @@ export function NamePronunciation() {
       disabled={isPlaying}
     >
       <Volume2 className="h-4 w-4" />
-      <span className="sr-only">Écouter la prononciation</span>
+      <span className="sr-only">{content.ui.pronunciation}</span>
     </Button>
   );
 }
