@@ -36,7 +36,7 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
           git clone --depth 1 "$SITE_REPO" site
-          rsync -a --delete --chmod=D755,F644 --exclude ".git/" --exclude "/projects/" --exclude "/CNAME" dist/ site/
+          rsync -a --delete --chmod=D755,F644 --exclude ".git/" --exclude "/Projects/" --exclude "/CNAME" dist/ site/
 
           cd site
           git config user.name "github-actions[bot]"
